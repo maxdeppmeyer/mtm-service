@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #102b43;
+  --color-navy-deep: #091f33;
+  --color-soft: #f3f6f7;
+  --color-accent: #f5a238;
+  --color-accent-hover: #ffb44a;
+  --color-accent-dark: #cb7010;
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+  --shadow-card: 0 4px 24px rgba(16, 43, 67, 0.05);
+  --shadow-soft: 0 18px 46px rgba(16, 43, 67, 0.09);
+  --shadow-hero: 0 30px 70px rgba(9, 31, 51, 0.22);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f2933;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+::selection {
+  background: #fcd9a7;
+  color: #102b43;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container-shell {
+  width: min(100% - 2.5rem, 1200px);
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .container-shell {
+    width: min(100% - 4rem, 1200px);
+  }
+}
+
+.eyebrow {
+  color: #cb7010;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin-top: 1rem;
+  color: #102b43;
+  font-size: clamp(1.85rem, 4vw, 2.55rem);
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.section-intro {
+  margin-top: 1.1rem;
+  color: #5c6e7d;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.button-primary,
+.button-secondary,
+.button-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 0.8rem;
+  padding: 0.78rem 1.18rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease, color 180ms ease;
+}
+
+.button-primary {
+  background: #102b43;
+  color: white;
+}
+
+.button-primary:hover {
+  background: #091f33;
+}
+
+.button-secondary {
+  border: 1px solid #d8e0e5;
+  background: white;
+  color: #102b43;
+}
+
+.button-secondary:hover {
+  border-color: #b9c5cd;
+  background: #f7f9fa;
+}
+
+.button-accent {
+  background: #f5a238;
+  color: #102b43;
+}
+
+.button-accent:hover {
+  background: #ffb44a;
+}
+
+.button-primary:focus-visible,
+.button-secondary:focus-visible,
+.button-accent:focus-visible {
+  outline: 2px solid #f5a238;
+  outline-offset: 3px;
+}
+
+.label {
+  margin-bottom: 0.45rem;
+  display: block;
+  color: #253746;
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid #d7e0e5;
+  border-radius: 0.72rem;
+  background: white;
+  padding: 0.78rem 0.9rem;
+  color: #102b43;
+  font-size: 0.95rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.field::placeholder {
+  color: #91a1ad;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #f5a238;
+  box-shadow: 0 0 0 3px rgba(245, 162, 56, 0.2);
+}
+
+.checkbox {
+  height: 1.1rem;
+  width: 1.1rem;
+  accent-color: #102b43;
+  flex-shrink: 0;
+}
+
+.wizard-heading {
+  color: #102b43;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.wizard-text {
+  margin-top: 0.65rem;
+  color: #607282;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.65;
+}
+
+.legal-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.8rem;
+  color: #102b43;
+  font-size: 1.3rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.legal-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.55rem;
+  color: #102b43;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.legal-content p,
+.legal-content li {
+  color: #526576;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.legal-content p + p {
+  margin-top: 0.85rem;
+}
+
+.legal-content ul {
+  margin-top: 0.65rem;
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.legal-content a {
+  color: #102b43;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #f5a238;
+  text-underline-offset: 0.18rem;
+}

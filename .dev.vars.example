@@ -1,0 +1,5 @@
+# Nur lokal verwenden. Echte Werte niemals in GitHub hochladen.
+RESEND_API_KEY=
+INQUIRY_TO_EMAIL=info@mtm-service.de
+INQUIRY_FROM_EMAIL=MTM Anfrage <anfrage@mtm-service.de>
+OPENAI_API_KEY=
