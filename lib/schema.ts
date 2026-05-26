@@ -18,7 +18,7 @@ export function localBusinessSchema() {
     },
     areaServed: [
       { "@type": "City", name: "Hannover" },
-      { "@type": "City", name: "Isernhagen" },
+      { "@type": "AdministrativeArea", name: "Region Hannover" },
     ],
     serviceType: services.map((service) => service.title),
   };

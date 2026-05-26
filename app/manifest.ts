@@ -4,11 +4,11 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "MTM Möbel Transport Montage",
     short_name: "MTM",
-    description: "Umzug, Möbeltransport, Montage und Entrümpelung in Hannover und Umgebung.",
+    description: "Umzug, Möbeltransport, Montage und Entrümpelung in Hannover & Umland.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
-    theme_color: "#102b43",
+    theme_color: "#d81c2d",
     icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
   };
 }

@@ -2,15 +2,14 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { company } from "@/lib/company";
 
-
 export const metadata: Metadata = {
   metadataBase: new URL(company.website),
   title: {
-    default: "MTM Möbel Transport Montage | Umzug & Möbeltransport Hannover",
+    default: "MTM Möbel Transport Montage | Umzug, Transport & Entrümpelung in Hannover",
     template: "%s | MTM Möbel Transport Montage",
   },
   description:
-    "MTM unterstützt Sie bei Umzug, Möbeltransport, Montage und Entrümpelung in Hannover und Umgebung. Jetzt kostenlos Anfrage senden.",
+    "MTM unterstützt bei Umzug, Möbeltransport, Montage und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
   applicationName: company.brandName,
   formatDetection: { telephone: true, email: true, address: true },
   icons: { icon: "/icon.svg" },
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#102b43",
+  themeColor: "#d81c2d",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

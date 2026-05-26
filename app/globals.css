@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #102b43;
-  --color-navy-deep: #091f33;
-  --color-soft: #f3f6f7;
-  --color-accent: #f5a238;
-  --color-accent-hover: #ffb44a;
-  --color-accent-dark: #cb7010;
+  --color-navy: #241113;
+  --color-navy-deep: #140709;
+  --color-soft: #fff5f6;
+  --color-accent: #d81c2d;
+  --color-accent-hover: #bf1726;
+  --color-accent-dark: #a60f1e;
   --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
-  --shadow-card: 0 4px 24px rgba(16, 43, 67, 0.05);
-  --shadow-soft: 0 18px 46px rgba(16, 43, 67, 0.09);
-  --shadow-hero: 0 30px 70px rgba(9, 31, 51, 0.22);
+  --shadow-card: 0 12px 28px rgba(84, 18, 24, 0.08);
+  --shadow-soft: 0 24px 54px rgba(84, 18, 24, 0.12);
+  --shadow-hero: 0 34px 80px rgba(44, 8, 12, 0.18);
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #1f2933;
+  --foreground: #1f1f1f;
 }
 
 html {
@@ -29,8 +29,8 @@ body {
 }
 
 ::selection {
-  background: #fcd9a7;
-  color: #102b43;
+  background: #ffd6db;
+  color: #241113;
 }
 
 button,
@@ -46,18 +46,18 @@ button {
 }
 
 .container-shell {
-  width: min(100% - 2.5rem, 1200px);
+  width: min(100% - 2.5rem, 1240px);
   margin-inline: auto;
 }
 
 @media (min-width: 640px) {
   .container-shell {
-    width: min(100% - 4rem, 1200px);
+    width: min(100% - 4rem, 1240px);
   }
 }
 
 .eyebrow {
-  color: #cb7010;
+  color: #a60f1e;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -66,16 +66,16 @@ button {
 
 .section-heading {
   margin-top: 1rem;
-  color: #102b43;
-  font-size: clamp(1.85rem, 4vw, 2.55rem);
-  line-height: 1.15;
-  font-weight: 750;
-  letter-spacing: -0.035em;
+  color: #241113;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 .section-intro {
-  margin-top: 1.1rem;
-  color: #5c6e7d;
+  margin-top: 1rem;
+  color: #5f4c50;
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -86,87 +86,88 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  border-radius: 0.8rem;
-  padding: 0.78rem 1.18rem;
-  font-size: 0.94rem;
+  border-radius: 0.95rem;
+  padding: 0.88rem 1.28rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease, color 180ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease, color 180ms ease, box-shadow 180ms ease;
 }
 
 .button-primary {
-  background: #102b43;
+  background: #d81c2d;
   color: white;
+  box-shadow: 0 12px 24px rgba(216, 28, 45, 0.16);
 }
 
 .button-primary:hover {
-  background: #091f33;
+  background: #bf1726;
 }
 
 .button-secondary {
-  border: 1px solid #d8e0e5;
+  border: 1px solid #f0c9ce;
   background: white;
-  color: #102b43;
+  color: #a60f1e;
 }
 
 .button-secondary:hover {
-  border-color: #b9c5cd;
-  background: #f7f9fa;
+  border-color: #e4a7af;
+  background: #fff5f6;
 }
 
 .button-accent {
-  background: #f5a238;
-  color: #102b43;
+  background: #241113;
+  color: white;
 }
 
 .button-accent:hover {
-  background: #ffb44a;
+  background: #140709;
 }
 
 .button-primary:focus-visible,
 .button-secondary:focus-visible,
 .button-accent:focus-visible {
-  outline: 2px solid #f5a238;
+  outline: 2px solid #d81c2d;
   outline-offset: 3px;
 }
 
 .label {
   margin-bottom: 0.45rem;
   display: block;
-  color: #253746;
+  color: #3d2529;
   font-size: 0.875rem;
   font-weight: 650;
 }
 
 .field {
   width: 100%;
-  border: 1px solid #d7e0e5;
-  border-radius: 0.72rem;
+  border: 1px solid #edd4d7;
+  border-radius: 0.88rem;
   background: white;
-  padding: 0.78rem 0.9rem;
-  color: #102b43;
+  padding: 0.86rem 0.96rem;
+  color: #241113;
   font-size: 0.95rem;
-  transition: border-color 160ms ease, box-shadow 160ms ease;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
 }
 
 .field::placeholder {
-  color: #91a1ad;
+  color: #9d868b;
 }
 
 .field:focus {
   outline: none;
-  border-color: #f5a238;
-  box-shadow: 0 0 0 3px rgba(245, 162, 56, 0.2);
+  border-color: #d81c2d;
+  box-shadow: 0 0 0 4px rgba(216, 28, 45, 0.12);
 }
 
 .checkbox {
   height: 1.1rem;
   width: 1.1rem;
-  accent-color: #102b43;
+  accent-color: #d81c2d;
   flex-shrink: 0;
 }
 
 .wizard-heading {
-  color: #102b43;
+  color: #241113;
   font-size: 1.35rem;
   line-height: 1.3;
   font-weight: 750;
@@ -175,8 +176,8 @@ button {
 
 .wizard-text {
   margin-top: 0.65rem;
-  color: #607282;
-  font-size: 0.93rem;
+  color: #725b60;
+  font-size: 0.94rem;
   line-height: 1.65;
 }
 
@@ -190,7 +191,7 @@ button {
 .legal-content h2 {
   margin-top: 2.25rem;
   margin-bottom: 0.8rem;
-  color: #102b43;
+  color: #241113;
   font-size: 1.3rem;
   font-weight: 750;
   letter-spacing: -0.025em;
@@ -199,14 +200,14 @@ button {
 .legal-content h3 {
   margin-top: 1.5rem;
   margin-bottom: 0.55rem;
-  color: #102b43;
+  color: #241113;
   font-size: 1.05rem;
   font-weight: 700;
 }
 
 .legal-content p,
 .legal-content li {
-  color: #526576;
+  color: #604e52;
   font-size: 0.98rem;
   line-height: 1.8;
 }
@@ -222,9 +223,23 @@ button {
 }
 
 .legal-content a {
-  color: #102b43;
+  color: #a60f1e;
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: #f5a238;
+  text-decoration-color: #d81c2d;
   text-underline-offset: 0.18rem;
+}
+
+.brand-gradient {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 26%),
+    linear-gradient(135deg, #d81c2d 0%, #be1424 52%, #8f0f19 100%);
+}
+
+.brand-soft-gradient {
+  background: linear-gradient(180deg, #fff7f8 0%, #fff1f3 100%);
+}
+
+.panel-border {
+  border: 1px solid #f0d8db;
 }

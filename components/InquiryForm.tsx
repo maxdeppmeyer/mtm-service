@@ -14,6 +14,7 @@ type FormStatus =
 
 export function InquiryForm({ selectedService, onServiceChange }: { selectedService: ServiceId; onServiceChange: (service: ServiceId) => void }) {
   const [status, setStatus] = useState<FormStatus>({ type: "idle" });
+  const [selectedFilesText, setSelectedFilesText] = useState("Fotos auswählen: JPG, PNG oder WEBP, je maximal 4 MB");
   const formRef = useRef<HTMLFormElement>(null);
 
   async function submitInquiry(event: FormEvent<HTMLFormElement>) {
@@ -29,6 +30,7 @@ export function InquiryForm({ selectedService, onServiceChange }: { selectedServ
       if (response.ok && result.success) {
         setStatus({ type: "success", message: "Vielen Dank für Ihre Anfrage. Ihre Angaben wurden übermittelt und werden persönlich geprüft." });
         formRef.current?.reset();
+        setSelectedFilesText("Fotos auswählen: JPG, PNG oder WEBP, je maximal 4 MB");
         return;
       }
       if (result.code === "NOT_CONFIGURED") {
@@ -42,7 +44,7 @@ export function InquiryForm({ selectedService, onServiceChange }: { selectedServ
   }
 
   return (
-    <form ref={formRef} onSubmit={submitInquiry} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
+    <form ref={formRef} onSubmit={submitInquiry} className="rounded-[1.85rem] bg-white p-6 shadow-soft sm:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="sm:col-span-2">
           <label className="label" htmlFor="service">Gewünschte Leistung</label>
@@ -73,7 +75,7 @@ export function InquiryForm({ selectedService, onServiceChange }: { selectedServ
         </div>
         <div className="sm:col-span-2">
           <label className="label" htmlFor="preferredDate">Wunschtermin</label>
-          <input className="field" id="preferredDate" name="preferredDate" type="date" />
+          <input className="field" id="preferredDate" name="preferredDate" type="text" placeholder="TT.MM.JJJJ oder Zeitraum" />
         </div>
         <div className="sm:col-span-2">
           <label className="label" htmlFor="message">Beschreibung des Auftrags</label>
@@ -81,10 +83,21 @@ export function InquiryForm({ selectedService, onServiceChange }: { selectedServ
         </div>
         <div className="sm:col-span-2">
           <label className="label" htmlFor="photos">Fotos hochladen <span className="text-slate-400">(optional, max. 3 Bilder)</span></label>
-          <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-4 text-sm text-slate-600 transition hover:border-accent hover:bg-orange-50">
+          <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-dashed border-rose-300 bg-rose-50/60 px-4 py-4 text-sm text-slate-700 transition hover:border-accent hover:bg-rose-50">
             <Upload size={19} className="text-accent-dark" />
-            <span>Fotos auswählen: JPG, PNG oder WEBP, je maximal 4 MB</span>
-            <input id="photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple className="sr-only" />
+            <span>{selectedFilesText}</span>
+            <input
+              id="photos"
+              name="photos"
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              multiple
+              className="sr-only"
+              onChange={(event) => {
+                const total = Array.from(event.target.files ?? []).slice(0, 3).length;
+                setSelectedFilesText(total > 0 ? `${total} Bild(er) ausgewählt` : "Fotos auswählen: JPG, PNG oder WEBP, je maximal 4 MB");
+              }}
+            />
           </label>
         </div>
         <div className="hidden" aria-hidden="true">
@@ -100,9 +113,9 @@ export function InquiryForm({ selectedService, onServiceChange }: { selectedServ
           <span>Ich habe die <Link href="/datenschutz" className="font-semibold text-navy underline decoration-accent underline-offset-2">Datenschutzerklärung</Link> gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage zu.</span>
         </label>
       </div>
-      <p className="mt-6 flex items-start gap-2 text-sm leading-6 text-slate-500"><Info size={16} className="mt-1 shrink-0" />Ihre Anfrage ist unverbindlich. Preis, Termin und Auftragsannahme werden persönlich geprüft.</p>
+      <p className="mt-6 flex items-start gap-2 text-sm leading-6 text-slate-500"><Info size={16} className="mt-1 shrink-0 text-accent-dark" />Ihre Anfrage ist unverbindlich. Preis, Termin und Auftragsannahme werden persönlich geprüft.</p>
       {status.type !== "idle" && status.type !== "sending" && (
-        <div role="status" className={`mt-5 rounded-xl px-4 py-4 text-sm leading-6 ${status.type === "success" ? "bg-emerald-50 text-emerald-800" : status.type === "not-configured" ? "bg-amber-50 text-amber-900" : "bg-red-50 text-red-800"}`}>
+        <div role="status" className={`mt-5 rounded-2xl px-4 py-4 text-sm leading-6 ${status.type === "success" ? "bg-emerald-50 text-emerald-800" : status.type === "not-configured" ? "bg-amber-50 text-amber-900" : "bg-red-50 text-red-800"}`}>
           <p className="flex items-start gap-2">{status.type === "success" ? <CheckCircle2 size={18} className="mt-0.5 shrink-0" /> : <Info size={18} className="mt-0.5 shrink-0" />}{status.message}</p>
           {status.type === "not-configured" && (
             <div className="mt-3 flex flex-wrap gap-3">

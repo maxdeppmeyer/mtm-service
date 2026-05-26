@@ -213,7 +213,7 @@ export function InquiryAssistant({ open, defaultService, onServiceChange, onClos
                   <p className="wizard-text">Wobei benötigen Sie Unterstützung?</p>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {[...services, { id: "sonstige" as ServiceId, title: "Sonstige Anfrage", description: "Beschreiben Sie Ihr Anliegen individuell.", image: "", alt: "" }].map((service) => (
-                      <button key={service.id} type="button" onClick={() => { setField("service", service.id); onServiceChange(service.id); }} className={`rounded-xl border p-4 text-left transition ${data.service === service.id ? "border-accent bg-orange-50 ring-2 ring-orange-100" : "border-slate-200 hover:border-slate-300"}`}>
+                      <button key={service.id} type="button" onClick={() => { setField("service", service.id); onServiceChange(service.id); }} className={`rounded-xl border p-4 text-left transition ${data.service === service.id ? "border-accent bg-rose-50 ring-2 ring-rose-100" : "border-slate-200 hover:border-slate-300"}`}>
                         <span className="font-semibold text-navy">{service.title}</span>
                       </button>
                     ))}
@@ -234,7 +234,7 @@ export function InquiryAssistant({ open, defaultService, onServiceChange, onClos
                 <div>
                   <h3 className="wizard-heading">Wann soll der Auftrag erfolgen?</h3>
                   <div className="mt-6 space-y-4">
-                    <div><label className="label" htmlFor="wizard-date">Wunschtermin</label><input id="wizard-date" className="field" type="date" value={data.preferredDate} onChange={(event) => setField("preferredDate", event.target.value)} /></div>
+                    <div><label className="label" htmlFor="wizard-date">Wunschtermin</label><input id="wizard-date" className="field" type="text" placeholder="TT.MM.JJJJ oder Zeitraum" value={data.preferredDate} onChange={(event) => setField("preferredDate", event.target.value)} /></div>
                     <div><label className="label" htmlFor="wizard-alternative">Alternativer Zeitraum</label><input id="wizard-alternative" className="field" placeholder="z. B. innerhalb der nächsten zwei Wochen" value={data.alternatePeriod} onChange={(event) => setField("alternatePeriod", event.target.value)} /></div>
                     <div><label className="label" htmlFor="wizard-urgency">Dringlichkeit</label><select id="wizard-urgency" className="field" value={data.urgency} onChange={(event) => setField("urgency", event.target.value)}><option value="flexibel">Flexibel</option><option value="zeitnah">Zeitnah</option><option value="dringend">Dringend</option></select></div>
                   </div>
@@ -288,7 +288,7 @@ export function InquiryAssistant({ open, defaultService, onServiceChange, onClos
                     <SummaryRow title="Kontakt" value={`${data.name}\n${data.phone}\n${data.email}`} />
                     <SummaryRow title="Fotos" value={photos.length > 0 ? `${photos.length} Bild(er) ausgewählt` : "Keine Fotos ausgewählt"} />
                   </dl>
-                  <p className="mt-5 flex gap-2 rounded-xl bg-orange-50 p-4 text-sm leading-6 text-slate-700"><Info size={18} className="mt-0.5 shrink-0 text-accent-dark" />Dies ist eine unverbindliche Anfrage. Ein Preis, ein Termin oder eine Auftragsannahme wird erst nach persönlicher Prüfung bestätigt.</p>
+                  <p className="mt-5 flex gap-2 rounded-xl bg-rose-50 p-4 text-sm leading-6 text-slate-700"><Info size={18} className="mt-0.5 shrink-0 text-accent-dark" />Dies ist eine unverbindliche Anfrage. Ein Preis, ein Termin oder eine Auftragsannahme wird erst nach persönlicher Prüfung bestätigt.</p>
                   {message && (
                     <div role="status" className={`mt-4 rounded-xl p-4 text-sm ${submitState === "not-configured" ? "bg-amber-50 text-amber-900" : "bg-red-50 text-red-800"}`}>
                       <p>{message}</p>
