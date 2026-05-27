@@ -16,16 +16,16 @@ export function Header({ onOpenAssistant }: { onOpenAssistant: () => void }) {
           <Image src="/logo.svg" alt="MTM Möbel Transport Montage" width={210} height={63} priority className="h-auto w-[170px] sm:w-[205px]" />
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 xl:gap-6 lg:flex">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-semibold text-slate-700 transition hover:text-accent-dark">
+            <Link key={item.href} href={item.href} className="whitespace-nowrap text-sm font-semibold text-slate-700 transition hover:text-accent-dark">
               {item.label}
             </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href={`tel:${company.phoneHref}`} className="inline-flex items-center gap-2 rounded-full border border-rose-200 px-4 py-2 text-sm font-semibold text-accent-dark transition hover:bg-rose-50">
+          <a href={`tel:${company.phoneHref}`} className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-rose-200 px-4 py-2 text-sm font-semibold text-accent-dark transition hover:bg-rose-50">
             <Phone size={16} />
             {company.phoneDisplay}
           </a>

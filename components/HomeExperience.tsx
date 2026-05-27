@@ -7,11 +7,8 @@ import {
   BadgeCheck,
   Building2,
   CheckCircle2,
-  ChevronDown,
   ClipboardCheck,
   Clock3,
-  FolderOpen,
-  Mail,
   MapPin,
   Package,
   Phone,
@@ -23,7 +20,6 @@ import {
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryAssistant } from "@/components/InquiryAssistant";
-import { RegionPanel } from "@/components/RegionPanel";
 import { company, extraServices, ServiceId, services } from "@/lib/company";
 import { useState } from "react";
 
@@ -93,74 +89,9 @@ const homeServices = [
   },
 ] as const;
 
-const placeholders = [
-  {
-    title: "Referenzen & Projektbeispiele",
-    text: "Hier bleibt bewusst ein sauberer Platzhalter, damit später echte Referenzen, Projektbeispiele oder kurze Kundenstimmen ergänzt werden können.",
-    icon: FolderOpen,
-    button: "Platzhalter für Referenzen",
-  },
-];
-
-const galleryImages = [
-  {
-    src: "/images/hero-team-mtm-20260527-v5.webp",
-    alt: "Das Team von MTM vor den Firmenfahrzeugen.",
-  },
-  {
-    src: "/images/leistung-moebelmontage-mtm-20260527-v5.webp",
-    alt: "MTM Mitarbeiter bei der Möbelmontage in einem Wohnraum.",
-  },
-  {
-    src: "/images/leistung-entruempelung-mtm-20260527-v5.webp",
-    alt: "Geräumte Garage nach einem MTM Einsatz.",
-  },
-  {
-    src: "/images/leistung-moebeltransport-mtm-20260527-v5.webp",
-    alt: "MTM Mitarbeiter im beladenen Transportfahrzeug.",
-  },
-  {
-    src: "/images/leistung-expresstransport-mtm-20260527-v5.webp",
-    alt: "MTM Transportfahrzeug für kurzfristige Transportaufträge.",
-  },
-  {
-    src: "/images/leistung-umzug-mtm-20260527-v5.webp",
-    alt: "MTM Fahrzeug bei einem Umzugseinsatz.",
-  },
-  {
-    src: "/images/leistung-entkernung-mtm-20260527-v7.webp",
-    alt: "Innenraum während einer Entkernung oder Sanierung.",
-  },
-  {
-    src: "/images/galerie-montage-detail-mtm-20260527-v5.webp",
-    alt: "Detailaufnahme bei der Möbelmontage.",
-  },
-  {
-    src: "/images/galerie-regalraum-mtm-20260527-v5.webp",
-    alt: "Aufgestellte Regale in einem Innenraum.",
-  },
-  {
-    src: "/images/galerie-schrank-mtm-20260527-v5.webp",
-    alt: "Montierter Schrank in einem Raum.",
-  },
-  {
-    src: "/images/galerie-garderobe-mtm-20260527-v5.webp",
-    alt: "Montierte Garderobe mit Kleiderstangen.",
-  },
-  {
-    src: "/images/galerie-transport-kartons-mtm-20260527-v5.webp",
-    alt: "Kartons bei einem Transportauftrag.",
-  },
-  {
-    src: "/images/galerie-einsatz-umzug-mtm-20260527-v5.webp",
-    alt: "MTM Fahrzeug beim Einsatz im Wohngebiet.",
-  },
-] as const;
-
 export function HomeExperience() {
   const [selectedService, setSelectedService] = useState<ServiceId>("umzug");
   const [assistantOpen, setAssistantOpen] = useState(false);
-  const [galleryOpen, setGalleryOpen] = useState(false);
 
   function openAssistant(service?: ServiceId) {
     if (service) setSelectedService(service);
@@ -256,85 +187,6 @@ export function HomeExperience() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20" aria-labelledby="galerie-heading">
-          <div className="container-shell">
-            <div className="overflow-hidden rounded-[2rem] border border-rose-100 bg-white p-7 shadow-card sm:p-8 lg:p-10">
-              <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-                <div className="max-w-2xl">
-                  <p className="eyebrow">Bildergalerie</p>
-                  <h2 id="galerie-heading" className="section-heading">Echte Eindrücke aus Transport und Montage.</h2>
-                  <p className="section-intro">Die Galerie bleibt kompakt und kann bei Bedarf direkt geöffnet werden. So wirkt die Startseite aufgeräumt, ohne dass die echten Bilder verloren gehen.</p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setGalleryOpen((current) => !current)}
-                  aria-expanded={galleryOpen}
-                  aria-controls="mtm-gallery-content"
-                  className="button-primary justify-center self-start"
-                >
-                  {galleryOpen ? "Bildergalerie schließen" : "Bildergalerie öffnen"}
-                  <ChevronDown size={18} className={`transition ${galleryOpen ? "rotate-180" : ""}`} />
-                </button>
-              </div>
-
-              <div className="mt-8 grid gap-4 md:grid-cols-3">
-                {galleryImages.slice(0, 3).map((image) => (
-                  <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-[1.35rem] bg-rose-50 shadow-sm">
-                    <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                  </div>
-                ))}
-              </div>
-
-              <div
-                id="mtm-gallery-content"
-                className={`overflow-hidden transition-all duration-500 ease-out ${galleryOpen ? "mt-8 max-h-[6000px] opacity-100" : "max-h-0 opacity-0"}`}
-              >
-                <div className="md:hidden">
-                  <div className="flex snap-x gap-4 overflow-x-auto pb-2">
-                    {galleryImages.slice(3).map((image) => (
-                      <div key={image.src} className="relative aspect-[4/3] min-w-[82%] snap-start overflow-hidden rounded-[1.35rem] border border-rose-100 bg-white shadow-sm">
-                        <Image src={image.src} alt={image.alt} fill sizes="80vw" className="object-cover" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="hidden md:grid md:grid-cols-2 md:gap-4 xl:grid-cols-3">
-                  {galleryImages.slice(3).map((image) => (
-                    <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-[1.35rem] border border-rose-100 bg-white shadow-sm">
-                      <Image src={image.src} alt={image.alt} fill sizes="(max-width: 1280px) 50vw, 33vw" className="object-cover" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 sm:py-20" aria-labelledby="einblicke-heading">
-          <div className="container-shell">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div className="max-w-2xl">
-                <p className="eyebrow">Referenzen</p>
-                <h2 id="einblicke-heading" className="section-heading">Ein sauberer Platzhalter für spätere Referenzen.</h2>
-                <p className="section-intro">Die Bildgalerie ist jetzt eingebaut. Dieser Bereich bleibt bewusst als einzelner Platzhalter für spätere Referenzen und Projektbeispiele erhalten.</p>
-              </div>
-            </div>
-            <div className="mt-10 max-w-3xl">
-              {placeholders.map(({ title, text, icon: Icon, button }) => (
-                <article key={title} className="rounded-[1.8rem] border border-dashed border-rose-200 bg-white p-7 shadow-card sm:p-8">
-                  <span className="inline-flex rounded-2xl bg-rose-50 p-3 text-accent-dark"><Icon size={24} /></span>
-                  <h3 className="mt-5 text-2xl font-bold tracking-tight text-navy">{title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">{text}</p>
-                  <div className="mt-6 inline-flex rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-accent-dark">{button}</div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <RegionPanel variant="home" onInquiry={() => openAssistant()} />
-
         <section id="anfrage" className="scroll-mt-28 bg-soft py-16 sm:py-20" aria-labelledby="anfrage-heading">
           <div className="container-shell">
             <div className="grid gap-8 overflow-hidden rounded-[2rem] bg-white p-7 shadow-soft sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-12 lg:p-12">
@@ -382,33 +234,6 @@ export function HomeExperience() {
               </div>
               <div className="mt-6 lg:mt-0">
                 <Link href="/faq" className="button-primary">Zur FAQ-Seite<ArrowRight size={17} /></Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="kontakt" className="scroll-mt-24 py-16 sm:py-20" aria-labelledby="kontakt-heading">
-          <div className="container-shell">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="eyebrow">Kontakt</p>
-              <h2 id="kontakt-heading" className="section-heading">Direkt erreichbar</h2>
-            </div>
-            <div className="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-3">
-              <a href={`tel:${company.phoneHref}`} className="rounded-[1.5rem] border border-rose-100 bg-white p-6 shadow-card transition hover:border-rose-200">
-                <Phone className="text-accent-dark" size={24} />
-                <h3 className="mt-4 text-lg font-bold text-navy">Telefon</h3>
-                <p className="mt-2 text-base font-semibold text-accent-dark">{company.phoneDisplay}</p>
-              </a>
-              <a href={`mailto:${company.email}`} className="rounded-[1.5rem] border border-rose-100 bg-white p-6 shadow-card transition hover:border-rose-200">
-                <Mail className="text-accent-dark" size={24} />
-                <h3 className="mt-4 text-lg font-bold text-navy">E-Mail</h3>
-                <p className="mt-2 text-base font-semibold text-accent-dark">{company.email}</p>
-              </a>
-              <div className="rounded-[1.5rem] border border-rose-100 bg-white p-6 shadow-card">
-                <MapPin className="text-accent-dark" size={24} />
-                <h3 className="mt-4 text-lg font-bold text-navy">Einsatzgebiet</h3>
-                <p className="mt-2 text-base font-semibold text-slate-700">{company.area}</p>
-                <p className="mt-1 text-sm text-slate-500">Regional erreichbar für private und gewerbliche Aufträge.</p>
               </div>
             </div>
           </div>

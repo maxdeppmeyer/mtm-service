@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { company } from "@/lib/company";
 
+const sharedImage = {
+  url: "/images/og-team-mtm-20260527-v5.webp",
+  width: 1200,
+  height: 630,
+  alt: "Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen",
+};
+
 export const homeMetadata: Metadata = {
   title: "MTM Möbel Transport Montage | Umzug, Transport & Entrümpelung in Hannover",
   description:
@@ -14,14 +21,7 @@ export const homeMetadata: Metadata = {
     locale: "de_DE",
     url: company.website,
     siteName: company.brandName,
-    images: [
-      {
-        url: "/images/og-team-mtm-20260527-v5.webp",
-        width: 1200,
-        height: 630,
-        alt: "Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen",
-      },
-    ],
+    images: [sharedImage],
   },
 };
 
@@ -38,13 +38,38 @@ export const servicesMetadata: Metadata = {
     locale: "de_DE",
     url: `${company.website}/leistungen`,
     siteName: company.brandName,
-    images: [
-      {
-        url: "/images/og-team-mtm-20260527-v5.webp",
-        width: 1200,
-        height: 630,
-        alt: "MTM Leistungen im Überblick",
-      },
-    ],
+    images: [sharedImage],
+  },
+};
+
+export const aboutMetadata: Metadata = {
+  title: "Über uns & Einblicke",
+  description:
+    "Echte Eindrücke vom MTM-Team, Transportfahrzeugen und Montagearbeiten in Hannover & Umland.",
+  alternates: { canonical: `${company.website}/ueber-uns` },
+  openGraph: {
+    title: "Über uns & Einblicke | MTM Möbel Transport Montage",
+    description: "Bildergalerie und Einblicke in die Arbeit von MTM in Hannover & Umland.",
+    type: "website",
+    locale: "de_DE",
+    url: `${company.website}/ueber-uns`,
+    siteName: company.brandName,
+    images: [sharedImage],
+  },
+};
+
+export const contactMetadata: Metadata = {
+  title: "Kontakt",
+  description:
+    "Kontaktieren Sie MTM Möbel Transport Montage für Umzug, Transport, Montage, Express und Entrümpelung in Hannover & Umland.",
+  alternates: { canonical: `${company.website}/kontakt` },
+  openGraph: {
+    title: "Kontakt | MTM Möbel Transport Montage",
+    description: "Telefon, E-Mail und Einsatzgebiet von MTM in Hannover & Umland.",
+    type: "website",
+    locale: "de_DE",
+    url: `${company.website}/kontakt`,
+    siteName: company.brandName,
+    images: [sharedImage],
   },
 };

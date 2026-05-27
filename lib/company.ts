@@ -21,9 +21,10 @@ export const company = {
 export const navigation = [
   { label: "Start", href: "/" },
   { label: "Leistungen", href: "/leistungen" },
+  { label: "Über uns", href: "/ueber-uns" },
   { label: "FAQ", href: "/faq" },
   { label: "Anfrage", href: "/#anfrage" },
-  { label: "Kontakt", href: "/#kontakt" },
+  { label: "Kontakt", href: "/kontakt" },
 ] as const;
 
 export type ServiceId = "umzug" | "moebeltransport" | "moebelmontage" | "entruempelung" | "expresstransport" | "sonstige";

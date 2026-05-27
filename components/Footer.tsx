@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { company } from "@/lib/company";
 
 export function Footer() {
@@ -12,6 +12,9 @@ export function Footer() {
           <p className="max-w-sm text-sm leading-7 text-rose-100/80">
             Zuverlässige Unterstützung bei Umzügen, Möbeltransporten, Montagen, Expresstransporten und Entrümpelungen in Hannover & Umland.
           </p>
+          <Link href="/ueber-uns" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-rose-200">
+            Über uns & Einblicke <ArrowRight size={15} />
+          </Link>
         </div>
         <div>
           <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-rose-200/70">Kontakt</h2>
@@ -19,6 +22,9 @@ export function Footer() {
             <a href={`tel:${company.phoneHref}`} className="flex items-start gap-3 hover:text-white"><Phone size={17} className="mt-0.5 shrink-0 text-rose-300" />{company.phoneDisplay}</a>
             <a href={`mailto:${company.email}`} className="flex items-start gap-3 hover:text-white"><Mail size={17} className="mt-0.5 shrink-0 text-rose-300" />{company.email}</a>
             <p className="flex items-start gap-3"><MapPin size={17} className="mt-0.5 shrink-0 text-rose-300" />Einsatzgebiet: {company.area}</p>
+            <Link href="/kontakt" className="inline-flex items-center gap-2 pt-1 font-semibold text-white hover:text-rose-200">
+              Zur Kontaktseite <ArrowRight size={15} />
+            </Link>
           </div>
         </div>
         <div>

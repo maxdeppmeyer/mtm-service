@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock3, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock3 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryAssistant } from "@/components/InquiryAssistant";
 import { RegionPanel } from "@/components/RegionPanel";
-import { company, extraServices, ServiceId, services } from "@/lib/company";
+import { extraServices, ServiceId, services } from "@/lib/company";
 import { useState } from "react";
 
 const detailActions = [
