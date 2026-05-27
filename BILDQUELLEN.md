@@ -37,4 +37,4 @@ Quellseiten:
 
 ## Einsatzgebietskarte
 
-`public/images/karte-region-hannover-design-mtm-20260527-v7.png` wurde aus der bereitgestellten Region-Hannover-Kartengrafik für den bestätigten roten Designblock aufbereitet: transparenter Hintergrund, dezente Linienwirkung, korrigierte beziehungsweise ergänzte Ortsbeschriftung und kein sichtbarer Schachbrett- oder weißer Bildhintergrund.
+`public/images/karte-region-hannover-design-mtm-20260527-v8.png` wurde aus der bereitgestellten Region-Hannover-Kartengrafik für den bestätigten roten Designblock aufbereitet: transparenter Hintergrund, einheitlich weiße Linien und Ortsnamen, korrigierte beziehungsweise ergänzte Ortsbeschriftung und kein sichtbarer Schachbrett- oder weißer Bildhintergrund.

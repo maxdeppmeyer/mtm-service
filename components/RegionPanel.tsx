@@ -61,7 +61,7 @@ export function RegionPanel({ variant, onInquiry }: RegionPanelProps) {
             </div>
             <div className={`flex items-center justify-center lg:justify-end ${isHome ? "lg:pr-1" : "lg:pr-4"}`}>
               <Image
-                src="/images/karte-region-hannover-design-mtm-20260527-v7.png"
+                src="/images/karte-region-hannover-design-mtm-20260527-v8.png"
                 alt="Region Hannover mit Hannover, Wedemark, Neustadt am Rübenberge, Burgwedel, Langenhagen, Isernhagen, Garbsen, Wunstorf, Seelze, Barsinghausen, Gehrden, Ronnenberg, Hemmingen, Wennigsen, Springe, Pattensen, Laatzen, Sehnde, Lehrte, Burgdorf und Uetze"
                 width={860}
                 height={640}
