@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { company, formattedAddress } from "@/lib/company";
+import { company } from "@/lib/company";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
         <div>
           <Image src="/logo.svg" alt="MTM Möbel Transport Montage" width={220} height={66} className="mb-5 h-auto w-[185px] sm:w-[215px]" />
           <p className="max-w-sm text-sm leading-7 text-rose-100/80">
-            Zuverlässige Unterstützung bei Umzügen, Möbeltransporten, Montagen und Entrümpelungen in Hannover & Umland.
+            Zuverlässige Unterstützung bei Umzügen, Möbeltransporten, Montagen, Expresstransporten und Entrümpelungen in Hannover & Umland.
           </p>
         </div>
         <div>
@@ -18,7 +18,7 @@ export function Footer() {
           <div className="space-y-3 text-sm text-rose-50">
             <a href={`tel:${company.phoneHref}`} className="flex items-start gap-3 hover:text-white"><Phone size={17} className="mt-0.5 shrink-0 text-rose-300" />{company.phoneDisplay}</a>
             <a href={`mailto:${company.email}`} className="flex items-start gap-3 hover:text-white"><Mail size={17} className="mt-0.5 shrink-0 text-rose-300" />{company.email}</a>
-            <p className="flex items-start gap-3"><MapPin size={17} className="mt-0.5 shrink-0 text-rose-300" />{formattedAddress()}<br />{company.address.country}</p>
+            <p className="flex items-start gap-3"><MapPin size={17} className="mt-0.5 shrink-0 text-rose-300" />Einsatzgebiet: {company.area}</p>
           </div>
         </div>
         <div>
@@ -26,6 +26,7 @@ export function Footer() {
           <div className="flex flex-col gap-3 text-sm text-rose-50">
             <Link href="/" className="hover:text-white">Startseite</Link>
             <Link href="/leistungen" className="hover:text-white">Leistungen im Detail</Link>
+            <Link href="/faq" className="hover:text-white">FAQ</Link>
             <Link href="/#anfrage" className="hover:text-white">Anfrage senden</Link>
             <Link href="/impressum" className="hover:text-white">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white">Datenschutz</Link>

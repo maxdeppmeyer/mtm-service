@@ -4,12 +4,12 @@ import { company } from "@/lib/company";
 export const homeMetadata: Metadata = {
   title: "MTM Möbel Transport Montage | Umzug, Transport & Entrümpelung in Hannover",
   description:
-    "MTM unterstützt bei Umzug, Möbeltransport, Montage und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
+    "MTM unterstützt bei Umzug, Möbeltransport, Montage, Expresstransport und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
   alternates: { canonical: company.website },
   openGraph: {
     title: "MTM Möbel Transport Montage | Umzug, Transport & Entrümpelung in Hannover",
     description:
-      "Zuverlässige Unterstützung für Umzug, Möbeltransport, Montage und Entrümpelung in Hannover & Umland.",
+      "Zuverlässige Unterstützung für Umzug, Möbeltransport, Montage, Expresstransport und Entrümpelung in Hannover & Umland.",
     type: "website",
     locale: "de_DE",
     url: company.website,
@@ -28,7 +28,7 @@ export const homeMetadata: Metadata = {
 export const servicesMetadata: Metadata = {
   title: "Leistungen im Detail",
   description:
-    "Alle Leistungen von MTM im Überblick: Umzug, Möbeltransport, Montage, Entrümpelung und weitere passende Arbeiten in Hannover & Umland.",
+    "Alle Leistungen von MTM im Überblick: Umzug, Möbeltransport, Möbelmontage, Entrümpelung und Expresstransporte in Hannover & Umland.",
   alternates: { canonical: `${company.website}/leistungen` },
   openGraph: {
     title: "Leistungen im Detail | MTM Möbel Transport Montage",

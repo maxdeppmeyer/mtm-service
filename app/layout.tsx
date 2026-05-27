@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | MTM Möbel Transport Montage",
   },
   description:
-    "MTM unterstützt bei Umzug, Möbeltransport, Montage und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
+    "MTM unterstützt bei Umzug, Möbeltransport, Montage, Expresstransport und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
   applicationName: company.brandName,
   formatDetection: { telephone: true, email: true, address: true },
   icons: { icon: "/icon.svg" },

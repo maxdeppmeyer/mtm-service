@@ -21,12 +21,12 @@ export const company = {
 export const navigation = [
   { label: "Start", href: "/" },
   { label: "Leistungen", href: "/leistungen" },
-  { label: "Ablauf", href: "/#ablauf" },
+  { label: "FAQ", href: "/faq" },
   { label: "Anfrage", href: "/#anfrage" },
   { label: "Kontakt", href: "/#kontakt" },
 ] as const;
 
-export type ServiceId = "umzug" | "moebeltransport" | "moebelmontage" | "entruempelung" | "sonstige";
+export type ServiceId = "umzug" | "moebeltransport" | "moebelmontage" | "entruempelung" | "expresstransport" | "sonstige";
 
 export type ServiceEntry = {
   id: Exclude<ServiceId, "sonstige">;
@@ -46,17 +46,17 @@ export const services: ServiceEntry[] = [
     title: "Umzug",
     shortTitle: "Umzüge",
     description:
-      "Private und gewerbliche Umzüge mit sorgfältiger Planung, sicherem Transport und persönlicher Abstimmung.",
+      "Zuverlässige Unterstützung bei privaten und gewerblichen Umzügen – persönlich abgestimmt und sorgfältig durchgeführt.",
     detailIntro:
-      "MTM unterstützt bei Wohnungs-, Haus-, Firmen- und Seniorenumzügen – zuverlässig, ordentlich und mit einem klaren Ablauf.",
+      "MTM begleitet Wohnungs-, Haus-, Firmen- und Seniorenumzüge in Hannover & Umland mit einem klaren Ablauf, verlässlicher Planung und persönlicher Abstimmung.",
     image: "/images/service-umzug.webp",
-    alt: "Umzugskartons in einer Wohnung vor einem anstehenden Umzug",
-    highlights: ["Privat- & Firmenumzüge", "Sicherer Transport", "Pünktliche Durchführung"],
+    alt: "MTM Transportfahrzeug mit Firmenbranding im Einsatz",
+    highlights: ["Privat- & Firmenumzüge", "Sorgfältige Planung", "Sichere Durchführung"],
     detailPoints: [
-      "Sichere und termingerechte Umzüge im Raum Hannover & Umland",
-      "Sorgfältiger Ab- und Aufbau nach Absprache",
-      "Sauberer Transport von Möbeln, Kartons und Einrichtung",
-      "Persönliche Rückmeldung und transparente Abstimmung",
+      "Unterstützung bei privaten, gewerblichen und seniorengerechten Umzügen",
+      "Persönliche Rückmeldung und individuelle Abstimmung zum Ablauf",
+      "Sicherer Transport von Möbeln, Kartons und Einrichtung",
+      "Auf Wunsch kombinierbar mit Möbelmontage oder Räumung",
     ],
   },
   {
@@ -66,13 +66,13 @@ export const services: ServiceEntry[] = [
     description:
       "Sicherer Möbeltransport für einzelne Stücke, komplette Einrichtungen oder größere Lieferungen.",
     detailIntro:
-      "Wenn Möbel, Geräte oder Einrichtungsteile sicher von A nach B müssen, übernimmt MTM den Transport sorgfältig und termintreu.",
+      "Wenn Möbel, Geräte oder Einrichtungsteile sicher von A nach B müssen, übernimmt MTM den Transport sorgfältig, termintreu und passend zum Auftrag.",
     image: "/images/service-transport.webp",
-    alt: "MTM Mitarbeiter transportieren ein eingewickeltes Möbelstück in ein Fahrzeug",
+    alt: "Zwei MTM Mitarbeiter tragen ein verpacktes Möbelstück zum Fahrzeug",
     highlights: ["Einzelstücke & Lieferungen", "Schonender Transport", "Zuverlässige Termine"],
     detailPoints: [
       "Transport einzelner Möbelstücke oder kompletter Lieferungen",
-      "Schonender Umgang mit Möbeln und empfindlichen Gegenständen",
+      "Schonender Umgang mit empfindlichen Gegenständen",
       "Geeignet für Privatkunden, Gewerbe und Objekttransporte",
       "Auf Wunsch kombinierbar mit Tragehilfe oder Montage",
     ],
@@ -82,12 +82,12 @@ export const services: ServiceEntry[] = [
     title: "Möbelmontage",
     shortTitle: "Montage",
     description:
-      "Professioneller Auf- und Abbau von Möbeln, Einrichtungen und ausgewählten Küchen- oder Schrankelementen.",
+      "Fachgerechter Auf- und Abbau von Möbeln, Einrichtungen und ausgewählten Schrank- oder Küchenelementen.",
     detailIntro:
-      "MTM kümmert sich um die fachgerechte Montage und Demontage von Möbeln – sauber, ordentlich und mit Blick auf eine sichere Nutzung.",
+      "MTM kümmert sich um die fachgerechte Montage und Demontage von Möbeln – sauber, ordentlich und mit Blick auf eine sichere Nutzung vor Ort.",
     image: "/images/service-montage.webp",
     alt: "Montagearbeit mit Akkuschrauber an einem Möbelstück",
-    highlights: ["Auf- & Abbau", "Ordentliche Ausführung", "Passend zum Transport"],
+    highlights: ["Auf- & Abbau", "Saubere Ausführung", "Auch einzeln anfragbar"],
     detailPoints: [
       "Aufbau und Demontage von Möbeln und Einrichtungselementen",
       "Sinnvolle Kombination mit Umzug oder Möbeltransport",
@@ -102,15 +102,33 @@ export const services: ServiceEntry[] = [
     description:
       "Räumungen von Wohnung, Keller, Garage oder Gewerbefläche – schnell, diskret und sauber durchgeführt.",
     detailIntro:
-      "MTM schafft Platz bei Wohnungs-, Haus-, Keller- oder Garagenräumungen und übernimmt eine saubere, diskrete Abwicklung.",
+      "MTM schafft Platz bei Wohnungs-, Haus-, Keller- oder Garagenräumungen und übernimmt eine saubere, diskrete und verlässliche Abwicklung.",
     image: "/images/service-entruempelung.webp",
-    alt: "Gefüllte Garage vor einer Entrümpelung",
+    alt: "Räumungsobjekt mit Möbeln und Gegenständen vor einer Entrümpelung",
     highlights: ["Wohnung, Keller & Garage", "Sortierung & Entsorgung", "Saubere Übergabe"],
     detailPoints: [
       "Entrümpelung von Wohnungen, Häusern, Kellern und Nebenräumen",
       "Sortierung, Ausräumung und Entsorgung nach Absprache",
       "Besenreine Übergabe bei passend vereinbartem Umfang",
-      "Diskrete und verlässliche Durchführung im Raum Hannover & Umland",
+      "Diskrete und verlässliche Durchführung in Hannover & Umland",
+    ],
+  },
+  {
+    id: "expresstransport",
+    title: "Expresstransporte",
+    shortTitle: "Express",
+    description:
+      "3,5-Tonnen-LKW inkl. Fahrer für eilige Transporte – flexibel, kurzfristig und jederzeit anfragbar.",
+    detailIntro:
+      "Wenn es schnell gehen muss, bietet MTM Expresstransporte mit 3,5-Tonnen-LKW und Fahrer für dringende Fahrten, kurzfristige Lieferungen oder spontane Transportaufträge an.",
+    image: "/images/service-expresstransport.webp",
+    alt: "MTM Fahrzeug beim Beladen für einen kurzfristigen Transportauftrag",
+    highlights: ["3,5-Tonnen-LKW", "Kurzfristig anfragbar", "Mit Fahrer"],
+    detailPoints: [
+      "Eilige Transporte mit 3,5-Tonnen-LKW inklusive Fahrer",
+      "Geeignet für kurzfristige Lieferungen und zeitkritische Fahrten",
+      "Schnelle Rückmeldung zur Verfügbarkeit und zum Ablauf",
+      "Auch sinnvoll als Ergänzung zu Möbeltransporten oder Sonderfahrten",
     ],
   },
 ];
