@@ -243,3 +243,41 @@ button {
 .panel-border {
   border: 1px solid #f0d8db;
 }
+
+.eyebrow-light {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 0.95rem;
+  padding: 0.88rem 1.28rem;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.08);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.hero-button-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-button-secondary:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .hero-cover img {
+    object-position: 54% center;
+  }
+}

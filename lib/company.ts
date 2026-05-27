@@ -50,7 +50,7 @@ export const services: ServiceEntry[] = [
     detailIntro:
       "MTM unterstützt bei Wohnungs-, Haus-, Firmen- und Seniorenumzügen – zuverlässig, ordentlich und mit einem klaren Ablauf.",
     image: "/images/service-umzug.webp",
-    alt: "MTM Team beim Be- und Entladen eines Umzugsfahrzeugs",
+    alt: "Umzugskartons in einer Wohnung vor einem anstehenden Umzug",
     highlights: ["Privat- & Firmenumzüge", "Sicherer Transport", "Pünktliche Durchführung"],
     detailPoints: [
       "Sichere und termingerechte Umzüge im Raum Hannover & Umland",
@@ -86,7 +86,7 @@ export const services: ServiceEntry[] = [
     detailIntro:
       "MTM kümmert sich um die fachgerechte Montage und Demontage von Möbeln – sauber, ordentlich und mit Blick auf eine sichere Nutzung.",
     image: "/images/service-montage.webp",
-    alt: "Frisch montiertes Sofa nach einer Möbelmontage",
+    alt: "Montagearbeit mit Akkuschrauber an einem Möbelstück",
     highlights: ["Auf- & Abbau", "Ordentliche Ausführung", "Passend zum Transport"],
     detailPoints: [
       "Aufbau und Demontage von Möbeln und Einrichtungselementen",
@@ -104,7 +104,7 @@ export const services: ServiceEntry[] = [
     detailIntro:
       "MTM schafft Platz bei Wohnungs-, Haus-, Keller- oder Garagenräumungen und übernimmt eine saubere, diskrete Abwicklung.",
     image: "/images/service-entruempelung.webp",
-    alt: "Wohnraum mit Gegenständen für eine Entrümpelung",
+    alt: "Gefüllte Garage vor einer Entrümpelung",
     highlights: ["Wohnung, Keller & Garage", "Sortierung & Entsorgung", "Saubere Übergabe"],
     detailPoints: [
       "Entrümpelung von Wohnungen, Häusern, Kellern und Nebenräumen",
@@ -121,7 +121,7 @@ export const extraServices = [
     description:
       "Ausgewählte Entkernungsarbeiten nach persönlicher Prüfung und Abstimmung des Umfangs.",
     image: "/images/service-entkernung.webp",
-    alt: "Teilentkernter Innenraum eines Gebäudes",
+    alt: "Innenraum im Zustand einer Renovierung und Entkernung",
     points: [
       "Entfernung von Böden, Wänden, Decken oder Einbauten nach Absprache",
       "Geeignet für Wohnungen, Häuser und ausgewählte Objekte",

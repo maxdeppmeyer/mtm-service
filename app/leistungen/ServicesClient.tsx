@@ -9,11 +9,10 @@ import { InquiryAssistant } from "@/components/InquiryAssistant";
 import { company, extraServices, ServiceId, services } from "@/lib/company";
 import { useState } from "react";
 
-
 const detailActions = [
-  "Persönliche Rückmeldung statt anonymer Sofortangebote",
+  "Persönliche Rückmeldung statt automatischer Preisversprechen",
   "Geeignet für Privat- und Gewerbekunden in Hannover & Umland",
-  "Anfrage per Formular, Telefon oder KI-Assistent möglich",
+  "Anfrage bequem über den Schritt-für-Schritt-Assistenten",
 ];
 
 export default function ServicesPage() {
@@ -29,33 +28,35 @@ export default function ServicesPage() {
     <>
       <Header onOpenAssistant={() => openAssistant()} />
       <main>
-        <section className="brand-soft-gradient py-14 sm:py-18">
-          <div className="container-shell grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+        <section className="brand-gradient overflow-hidden text-white">
+          <div className="container-shell grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr_0.88fr] lg:items-center lg:gap-14">
             <div>
-              <p className="eyebrow">Leistungen im Detail</p>
-              <h1 className="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-navy sm:text-5xl lg:leading-[1.08]">
-                Mehr Informationen zu den Leistungen von MTM.
+              <p className="eyebrow-light">Leistungen im Detail</p>
+              <h1 className="mt-5 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:leading-[1.08]">
+                Leistungen, die zu Ihrem Auftrag passen.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Auf dieser Seite werden die wichtigsten Leistungsbereiche ausführlicher vorgestellt – passend zur übersichtlichen Startseite und im roten MTM-Stil.
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/90">
+                Umzug, Möbeltransport, Montage und Entrümpelung für Hannover & Umland – übersichtlich erklärt und direkt anfragbar.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Link href="/#anfrage" className="button-primary justify-center">Zur Anfrage<ArrowRight size={18} /></Link>
-                <button type="button" onClick={() => openAssistant()} className="button-accent justify-center"><Sparkles size={18} />KI-Assistent</button>
-              </div>
-              <ul className="mt-8 space-y-3 text-sm text-slate-700">
+              <ul className="mt-8 space-y-3 text-sm text-white/90">
                 {detailActions.map((item) => (
-                  <li key={item} className="flex items-start gap-3"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent-dark" />{item}</li>
+                  <li key={item} className="flex items-start gap-3"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-white" />{item}</li>
                 ))}
               </ul>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <button type="button" onClick={() => openAssistant()} className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-5 py-4 font-bold text-accent-dark transition hover:bg-rose-50">
+                  Anfrage vorbereiten<ArrowRight size={18} />
+                </button>
+                <Link href="/" className="hero-button-secondary justify-center py-4">Zur Startseite</Link>
+              </div>
             </div>
-            <div className="overflow-hidden rounded-[2rem] bg-white shadow-hero">
-              <Image src="/images/region-overview.webp" alt="Visuelle Übersicht der MTM Leistungen" width={1254} height={1254} className="h-auto w-full object-cover" />
+            <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-soft backdrop-blur-sm">
+              <Image src="/images/service-transport.webp" alt="MTM Mitarbeiter beim sicheren Möbeltransport" width={1200} height={760} className="aspect-[4/3] w-full rounded-[1.4rem] object-cover" />
             </div>
           </div>
         </section>
 
-        <section className="py-16 sm:py-20">
+        <section className="py-12 sm:py-16">
           <div className="container-shell">
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               {services.map((service) => (
@@ -67,14 +68,14 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="space-y-10 pb-16 sm:space-y-12 sm:pb-20">
+        <section className="pb-16 sm:pb-20">
           <div className="container-shell space-y-10 sm:space-y-12">
             {services.map((service, index) => (
-              <article key={service.id} id={service.id} className="scroll-mt-28 grid gap-6 overflow-hidden rounded-[2rem] border border-rose-100 bg-white shadow-card lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-                <div className={`relative min-h-[280px] sm:min-h-[360px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+              <article key={service.id} id={service.id} className="scroll-mt-28 grid gap-0 overflow-hidden rounded-[2rem] border border-rose-100 bg-white shadow-card lg:grid-cols-[0.94fr_1.06fr] lg:items-stretch">
+                <div className={`relative min-h-[285px] sm:min-h-[370px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <Image src={service.image} alt={service.alt} fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
                 </div>
-                <div className={`p-7 sm:p-10 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`flex flex-col justify-center p-7 sm:p-10 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   <p className="eyebrow">{service.shortTitle}</p>
                   <h2 className="mt-4 text-3xl font-bold tracking-tight text-navy sm:text-4xl">{service.title}</h2>
                   <p className="mt-5 text-base leading-8 text-slate-600">{service.detailIntro}</p>
@@ -83,10 +84,7 @@ export default function ServicesPage() {
                       <li key={point} className="flex items-start gap-3"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent-dark" />{point}</li>
                     ))}
                   </ul>
-                  <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                    <Link href="/#anfrage" className="button-primary">Diese Leistung anfragen</Link>
-                    <button type="button" onClick={() => openAssistant(service.id)} className="button-secondary">Per Assistent vorbereiten</button>
-                  </div>
+                  <button type="button" onClick={() => openAssistant(service.id)} className="button-primary mt-8 w-fit">Diese Leistung anfragen<ArrowRight size={17} /></button>
                 </div>
               </article>
             ))}
@@ -94,48 +92,43 @@ export default function ServicesPage() {
         </section>
 
         <section className="bg-soft py-16 sm:py-20">
-          <div className="container-shell grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-            <div>
-              <p className="eyebrow">Weitere Leistungen</p>
-              <h2 className="section-heading">Zusätzliche Arbeiten nach persönlicher Abstimmung</h2>
-              <p className="section-intro">Je nach Auftrag können auch weitere passende Leistungen abgestimmt werden – zum Beispiel ausgewählte Entkernungsarbeiten.</p>
-              <div className="mt-6 rounded-[1.6rem] border border-rose-100 bg-white p-6 shadow-card">
-                {extraServices.map((entry) => (
-                  <div key={entry.title}>
-                    <h3 className="text-xl font-bold text-navy">{entry.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-600">{entry.description}</p>
-                    <ul className="mt-4 space-y-2 text-sm text-slate-700">
-                      {entry.points.map((point) => <li key={point} className="flex items-start gap-2"><CheckCircle2 size={17} className="mt-0.5 shrink-0 text-accent-dark" />{point}</li>)}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="container-shell grid gap-7 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
             <div className="overflow-hidden rounded-[2rem] bg-white shadow-card">
-              <Image src="/images/service-entkernung.webp" alt="Innenraum mit Entkernungsarbeiten" width={1000} height={720} className="h-auto w-full object-cover" />
+              <Image src={extraServices[0].image} alt={extraServices[0].alt} width={1600} height={1066} className="aspect-[4/3] h-auto w-full object-cover" />
+            </div>
+            <div>
+              <p className="eyebrow">Weitere Arbeiten</p>
+              <h2 className="section-heading">Entkernung nach persönlicher Abstimmung</h2>
+              <p className="section-intro">{extraServices[0].description}</p>
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-700">
+                {extraServices[0].points.map((point) => (
+                  <li key={point} className="flex items-start gap-3"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent-dark" />{point}</li>
+                ))}
+              </ul>
+              <button type="button" onClick={() => openAssistant("sonstige")} className="button-primary mt-8">Anfrage vorbereiten<ArrowRight size={17} /></button>
             </div>
           </div>
         </section>
 
         <section className="py-16 sm:py-20">
-          <div className="container-shell brand-gradient overflow-hidden rounded-[2rem] px-7 py-8 text-white shadow-soft sm:px-10 sm:py-12 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
+          <div className="container-shell grid gap-8 overflow-hidden rounded-[2rem] border border-rose-100 bg-white p-7 shadow-card sm:p-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
             <div>
-              <p className="eyebrow text-rose-200">Kontakt & Region</p>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Hannover & Umland im Blick</h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-rose-50/90">
-                MTM ist regional im Einsatz. Für die Anfrage genügt meist ein kurzer Überblick zu Leistung, Ort, Termin und Besonderheiten.
+              <p className="eyebrow">Einsatzgebiet</p>
+              <h2 className="section-heading">Hannover & Umland</h2>
+              <p className="section-intro">
+                MTM ist regional erreichbar und unterstützt Sie bei passenden Aufträgen in Hannover sowie den umliegenden Städten und Gemeinden.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href={`tel:${company.phoneHref}`} className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-3 text-sm font-semibold hover:bg-white/10"><Phone size={16} />{company.phoneDisplay}</a>
-                <Link href="/#anfrage" className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-accent-dark hover:bg-rose-50">Zur Anfrage<ArrowRight size={16} /></Link>
+              <div className="mt-7 inline-flex items-start gap-3 rounded-[1.3rem] bg-rose-50 px-4 py-4 text-sm leading-6 text-slate-700">
+                <MapPin size={18} className="mt-0.5 shrink-0 text-accent-dark" />
+                <span>Standort: {company.address.street}, {company.address.postalCode} {company.address.city}<br />Einsatzgebiet: {company.area}</span>
               </div>
-              <div className="mt-8 inline-flex items-start gap-3 rounded-[1.3rem] border border-white/15 bg-white/10 px-4 py-4 text-sm leading-6 text-rose-50/90 backdrop-blur-sm">
-                <MapPin size={18} className="mt-0.5 shrink-0" />
-                <span>Standort: {company.address.street}, {company.address.postalCode} {company.address.city} · Einsatzgebiet: {company.area}</span>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a href={`tel:${company.phoneHref}`} className="button-secondary"><Phone size={16} />{company.phoneDisplay}</a>
+                <button type="button" onClick={() => openAssistant()} className="button-primary"><Sparkles size={16} />Anfrage starten</button>
               </div>
             </div>
-            <div className="mt-8 overflow-hidden rounded-[1.8rem] border border-white/15 bg-white/10 p-3 backdrop-blur-sm lg:mt-0">
-              <Image src="/images/region-map.webp" alt="Region Hannover als Einsatzgebietskarte" width={900} height={820} className="h-auto w-full rounded-[1.25rem] object-cover" />
+            <div className="rounded-[1.7rem] bg-rose-50 p-5 sm:p-8">
+              <Image src="/images/region-map.svg" alt="Grafische Darstellung des Einsatzgebiets rund um Hannover" width={720} height={620} className="h-auto w-full" />
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 # MTM-Webseite hochladen und bei Cloudflare veröffentlichen
 
-Diese Anleitung ist für die fertige Projekt-ZIP gedacht. Der Formularversand funktioniert öffentlich erst, wenn die drei serverseitigen E-Mail-Variablen in Cloudflare hinterlegt sind.
+Diese Anleitung ist für die fertige Projekt-ZIP gedacht. Der Versand des Anfrage-Assistenten funktioniert öffentlich erst, wenn die drei serverseitigen E-Mail-Variablen in Cloudflare hinterlegt sind.
 
 ## 1. ZIP entpacken und lokal prüfen
 
@@ -13,7 +13,7 @@ npm install
 npm run dev
 ```
 
-4. Im Browser `http://localhost:3000` öffnen und die Startseite, Impressum, Datenschutz, Formular und den Anfrage-Assistenten prüfen.
+4. Im Browser `http://localhost:3000` öffnen und die Startseite, Leistungsseite, Impressum, Datenschutz und den Anfrage-Assistenten prüfen.
 
 Zusätzliche technische Prüfung:
 
@@ -25,7 +25,7 @@ npm run cf:build
 
 ## 2. Projekt in GitHub hochladen
 
-1. Bei GitHub ein neues, leeres Repository anlegen, zum Beispiel `mtm-service-website`.
+1. Bei GitHub ein neues, leeres Repository anlegen, zum Beispiel `mtm-service`.
 2. Im Projektordner diese Befehle ausführen:
 
 ```bash
@@ -51,7 +51,7 @@ Für dieses Projekt **Cloudflare Workers** verwenden, nicht Cloudflare Pages. Da
 6. Als Worker-Name exakt diesen Namen verwenden:
 
 ```text
-mtm-service-website
+mtm-service
 ```
 
 Der Name muss mit `wrangler.jsonc` übereinstimmen.
@@ -69,9 +69,9 @@ Root directory: /
 
 Anschließend speichern und das erste Deployment ausführen lassen.
 
-## 5. Formularversand aktivieren
+## 5. Anfrageversand aktivieren
 
-Das Formular und der Anfrage-Assistent sind bereits vollständig eingebaut. Für den echten Versand ist ein serverseitiger E-Mail-Dienst vorgesehen. Vorbereitet ist **Resend**.
+Der Anfrage-Assistent ist als sichtbare Anfrageführung vollständig eingebaut. Für den echten Versand ist ein serverseitiger E-Mail-Dienst vorgesehen. Vorbereitet ist **Resend**.
 
 Benötigt werden:
 
@@ -94,14 +94,14 @@ Danach erneut deployen oder einen neuen Commit nach GitHub pushen und eine Testa
 
 Nach erfolgreichem Test des Workers:
 
-1. Den Cloudflare Worker `mtm-service-website` öffnen.
+1. Den Cloudflare Worker `mtm-service` öffnen.
 2. Unter Domains beziehungsweise Custom Domains die Domain hinzufügen:
 
 ```text
 www.mtm-service.de
 ```
 
-3. Erst auf die neue Webseite umstellen, wenn Startseite, Mobilansicht, Formularversand, Impressum und Datenschutz getestet wurden.
+3. Erst auf die neue Webseite umstellen, wenn Startseite, Mobilansicht, Versand des Anfrage-Assistenten, Impressum und Datenschutz getestet wurden.
 
 ## 7. Vor dem endgültigen Livegang prüfen
 
@@ -115,9 +115,10 @@ www.mtm-service.de
 ## Bereits umgesetzt
 
 - neue mobile-first Startseite als kompakter Onepager
-- echtes Teamfoto und echte MTM-Einsatzbilder
-- Leistungen, Ablauf, Vertrauensbereich und Kontaktbereich
-- klassisches Anfrageformular
+- vollflächiger Hero-Bereich mit echtem MTM-Teamfoto
+- passende, lizenzdokumentierte Leistungsbilder und neue SVG-Einsatzgebietsgrafik
+- Leistungen, separate Leistungsseite, Ablauf und Kontaktbereich
+- reduzierte Anfrageauswahl als Einstieg in den Assistenten
 - schrittweiser Anfrage-Assistent mit Zusammenfassung
 - serverseitig vorbereiteter E-Mail-Versand mit Foto-Upload-Prüfung
 - Impressum und Datenschutz
