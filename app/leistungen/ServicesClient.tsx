@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2, Clock3, MapPin, Phone, Sparkles } from "lucid
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryAssistant } from "@/components/InquiryAssistant";
-import { company, extraServices, ServiceId, services } from "@/lib/company";
+import { company, ServiceId, services } from "@/lib/company";
 import { useState } from "react";
 
 const detailActions = [
@@ -36,7 +36,7 @@ export default function ServicesPage() {
                 Leistungen, die zu Ihrem Auftrag passen.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/90">
-                Umzug, Möbeltransport, Möbelmontage, Entrümpelung und Expresstransporte für Hannover & Umland – klar erklärt und direkt anfragbar.
+                Umzug, Möbeltransport, Möbelmontage, Entrümpelung, Expresstransporte und Entkernung für Hannover & Umland – klar erklärt und direkt anfragbar.
               </p>
               <ul className="mt-8 space-y-3 text-sm text-white/90">
                 {detailActions.map((item) => (
@@ -51,7 +51,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-soft backdrop-blur-sm">
-              <Image src="/images/leistung-expresstransport-mtm-2026.webp" alt="MTM Fahrzeug beim Beladen für einen kurzfristigen Transportauftrag" width={1200} height={760} className="aspect-[4/3] w-full rounded-[1.4rem] object-cover" />
+              <Image src="/images/leistung-expresstransport-mtm-20260527-v4.webp" alt="MTM LKW bereit für einen Transportauftrag" width={1200} height={900} className="aspect-[4/3] w-full rounded-[1.4rem] object-cover" />
             </div>
           </div>
         </section>
@@ -86,25 +86,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="bg-soft py-16 sm:py-20">
-          <div className="container-shell grid gap-7 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
-            <div className="overflow-hidden rounded-[2rem] bg-white shadow-card">
-              <Image src={extraServices[0].image} alt={extraServices[0].alt} width={1600} height={1066} className="aspect-[4/3] h-auto w-full object-cover" />
-            </div>
-            <div>
-              <p className="eyebrow">Weitere Arbeiten</p>
-              <h2 className="section-heading">Entkernung nach persönlicher Abstimmung</h2>
-              <p className="section-intro">{extraServices[0].description}</p>
-              <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-700">
-                {extraServices[0].points.map((point) => (
-                  <li key={point} className="flex items-start gap-3"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent-dark" />{point}</li>
-                ))}
-              </ul>
-              <button type="button" onClick={() => openAssistant("sonstige")} className="button-primary mt-8">Anfrage vorbereiten<ArrowRight size={17} /></button>
-            </div>
-          </div>
-        </section>
-
         <section className="py-16 sm:py-20">
           <div className="container-shell grid gap-8 overflow-hidden rounded-[2rem] border border-rose-100 bg-white p-7 shadow-card sm:p-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
             <div>
@@ -122,8 +103,8 @@ export default function ServicesPage() {
                 <button type="button" onClick={() => openAssistant()} className="button-primary"><Sparkles size={16} />Anfrage starten</button>
               </div>
             </div>
-            <div className="rounded-[1.7rem] bg-rose-50 p-5 sm:p-8">
-              <Image src="/images/karte-region-hannover-2026.svg" alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland" width={900} height={640} className="h-auto w-full" />
+            <div className="rounded-[1.7rem] bg-rose-50 p-4 sm:p-7">
+              <Image src="/images/karte-region-hannover-mtm-20260527-v4.webp" alt="Karte der Region Hannover mit Ortsnamen im Umland" width={1254} height={1254} className="h-auto w-full" />
             </div>
           </div>
         </section>
@@ -132,8 +113,8 @@ export default function ServicesPage() {
           <div className="container-shell overflow-hidden rounded-[2rem] bg-white p-7 shadow-card sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
             <div className="max-w-3xl">
               <p className="eyebrow">FAQ</p>
-              <h2 className="section-heading">Viele Antworten finden Sie jetzt gesammelt auf der FAQ-Seite.</h2>
-              <p className="section-intro">Die FAQ ist in 6 Themenbereiche gegliedert und beantwortet wichtige Fragen zu Leistungen, Ablauf, Terminen, Kosten und Organisation.</p>
+              <h2 className="section-heading">Viele Antworten finden Sie kompakt auf der FAQ-Seite.</h2>
+              <p className="section-intro">Sechs aufklappbare Themenbereiche beantworten wichtige Fragen zu Leistungen, Ablauf, Terminen, Kosten und Organisation.</p>
             </div>
             <div className="mt-6 flex flex-wrap gap-3 lg:mt-0">
               <Link href="/faq" className="button-primary">Zur FAQ-Seite<ArrowRight size={17} /></Link>

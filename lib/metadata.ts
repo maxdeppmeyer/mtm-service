@@ -4,19 +4,19 @@ import { company } from "@/lib/company";
 export const homeMetadata: Metadata = {
   title: "MTM Möbel Transport Montage | Umzug, Transport & Entrümpelung in Hannover",
   description:
-    "MTM unterstützt bei Umzug, Möbeltransport, Montage, Expresstransport und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
+    "MTM unterstützt bei Umzug, Möbeltransport, Montage, Expresstransport, Entkernung und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
   alternates: { canonical: company.website },
   openGraph: {
     title: "MTM Möbel Transport Montage | Umzug, Transport & Entrümpelung in Hannover",
     description:
-      "Zuverlässige Unterstützung für Umzug, Möbeltransport, Montage, Expresstransport und Entrümpelung in Hannover & Umland.",
+      "Zuverlässige Unterstützung für Umzug, Möbeltransport, Montage, Expresstransport, Entkernung und Entrümpelung in Hannover & Umland.",
     type: "website",
     locale: "de_DE",
     url: company.website,
     siteName: company.brandName,
     images: [
       {
-        url: "/images/og-teamfoto-mtm-2026.webp",
+        url: "/images/og-team-mtm-20260527-v4.webp",
         width: 1200,
         height: 630,
         alt: "Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen",
@@ -28,7 +28,7 @@ export const homeMetadata: Metadata = {
 export const servicesMetadata: Metadata = {
   title: "Leistungen im Detail",
   description:
-    "Alle Leistungen von MTM im Überblick: Umzug, Möbeltransport, Möbelmontage, Entrümpelung und Expresstransporte in Hannover & Umland.",
+    "Alle Leistungen von MTM: Umzug, Möbeltransport, Möbelmontage, Entrümpelung, Expresstransporte und Entkernung in Hannover & Umland.",
   alternates: { canonical: `${company.website}/leistungen` },
   openGraph: {
     title: "Leistungen im Detail | MTM Möbel Transport Montage",
@@ -40,7 +40,7 @@ export const servicesMetadata: Metadata = {
     siteName: company.brandName,
     images: [
       {
-        url: "/images/og-teamfoto-mtm-2026.webp",
+        url: "/images/og-team-mtm-20260527-v4.webp",
         width: 1200,
         height: 630,
         alt: "MTM Leistungen im Überblick",

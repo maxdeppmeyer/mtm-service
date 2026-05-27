@@ -10,99 +10,93 @@ import { useState } from "react";
 
 const faqSections = [
   {
-    id: "umzug",
     title: "Umzug",
     questions: [
-      ["Welche Umzüge übernimmt MTM?", "MTM unterstützt bei privaten, gewerblichen und auf Anfrage auch bei seniorengerechten Umzügen in Hannover & Umland."],
-      ["Kann ich nur einen kleinen Umzug anfragen?", "Ja, auch kleinere Umzüge oder Teilumzüge können unverbindlich angefragt werden."],
-      ["Hilft MTM auch beim Tragen der Möbel?", "Ja, MTM übernimmt im Rahmen des Auftrags selbstverständlich auch das Tragen und Verladen."],
-      ["Kann Umzug und Möbelmontage kombiniert werden?", "Ja, genau dafür ist die Webseite ausgelegt. Umzug, Transport und Montage können passend kombiniert werden."],
-      ["Muss ich Kartons selbst besorgen?", "Das hängt vom Auftrag ab. Im ersten Schritt reicht eine unverbindliche Anfrage, danach wird der genaue Bedarf persönlich besprochen."],
-      ["Werden auch Firmenumzüge durchgeführt?", "Ja, gewerbliche Umzüge können ebenfalls angefragt werden, zum Beispiel für Büros oder kleinere Betriebsverlagerungen."],
-      ["Ist vor dem Umzug eine Rücksprache möglich?", "Ja, MTM meldet sich persönlich zurück und klärt offene Punkte zum Ablauf, Umfang und Termin."],
-      ["Kann ich meinen Wunschtermin angeben?", "Ja, Sie können im Anfrage-Assistenten einen Wunschtermin oder einen Zeitraum angeben."],
-      ["Übernimmt MTM auch kurzfristige Umzüge?", "Kurzfristige Anfragen sind möglich. Die Verfügbarkeit wird nach Eingang der Anfrage persönlich geprüft."],
-      ["Wie läuft die Anfrage für einen Umzug ab?", "Sie starten online oder telefonisch, geben die wichtigsten Eckdaten an und erhalten danach eine persönliche Rückmeldung."],
+      ["Welche Umzüge übernimmt MTM?", "MTM unterstützt bei privaten und gewerblichen Umzügen in Hannover & Umland."],
+      ["Kann ich auch einen kleinen Umzug anfragen?", "Ja, auch kleinere Umzüge oder Teilumzüge können unverbindlich angefragt werden."],
+      ["Hilft MTM beim Tragen und Verladen?", "Ja, das Tragen und sichere Verladen gehört je nach abgestimmtem Auftrag dazu."],
+      ["Kann ein Umzug mit Montage kombiniert werden?", "Ja, Umzug, Transport und Möbelmontage können gemeinsam angefragt werden."],
+      ["Werden auch Firmenumzüge durchgeführt?", "Ja, gewerbliche Umzüge können ebenfalls individuell angefragt werden."],
+      ["Kann ich einen Wunschtermin nennen?", "Ja, im Anfrage-Assistenten können Sie ein Wunschdatum oder einen Zeitraum angeben."],
+      ["Sind kurzfristige Umzüge möglich?", "Kurzfristige Anfragen sind möglich. Die Verfügbarkeit wird persönlich geprüft."],
+      ["Kann ich Fotos mitschicken?", "Ja, Fotos helfen bei der ersten Einschätzung und können im Assistenten hochgeladen werden."],
+      ["Ist die Anfrage verbindlich?", "Nein, die Anfrage bleibt unverbindlich bis zur persönlichen Abstimmung."],
+      ["Wie starte ich am schnellsten?", "Wählen Sie auf der Startseite Umzug aus oder rufen Sie direkt an."],
     ],
   },
   {
-    id: "moebeltransport",
     title: "Möbeltransport",
     questions: [
-      ["Transportiert MTM auch einzelne Möbelstücke?", "Ja, Möbeltransport ist nicht nur für komplette Einrichtungen geeignet, sondern auch für einzelne Stücke oder Lieferungen."],
-      ["Sind auch empfindliche Möbel möglich?", "Ja, der Transport wird sorgfältig und passend zum Auftrag abgestimmt."],
-      ["Kann ich einen Transport auch ohne Umzug buchen?", "Ja, Möbeltransport kann unabhängig von einem Umzug angefragt werden."],
-      ["Unterstützt MTM auch bei Abholung und Lieferung?", "Ja, wenn Möbel oder Einrichtung von A nach B gebracht werden sollen, kann das passend angefragt werden."],
-      ["Sind Transporte für Privatkunden und Gewerbe möglich?", "Ja, Möbeltransporte sind sowohl für Privatkunden als auch für gewerbliche Kunden geeignet."],
-      ["Kann Transport mit Montage kombiniert werden?", "Ja, Transport und anschließende Montage lassen sich sinnvoll miteinander verbinden."],
-      ["Kann ich Fotos vom Transportgut mitschicken?", "Ja, im Anfrage-Assistenten können optional Bilder hochgeladen werden."],
-      ["Kann ich auch größere Lieferungen anfragen?", "Ja, auch größere Lieferungen oder umfangreichere Transporte können beschrieben und angefragt werden."],
-      ["Bekomme ich sofort einen Festpreis?", "Nein, die Anfrage wird erst persönlich geprüft. Danach erfolgt eine passende Rückmeldung."],
-      ["Wie schnell bekomme ich eine Rückmeldung?", "Nach Eingang der Anfrage meldet sich MTM so schnell wie möglich persönlich zurück."],
+      ["Transportiert MTM einzelne Möbelstücke?", "Ja, einzelne Möbelstücke und komplette Lieferungen können angefragt werden."],
+      ["Kann ich den Transport ohne Umzug buchen?", "Ja, Möbeltransport ist eine eigenständige Leistung."],
+      ["Werden empfindliche Möbel transportiert?", "Der Transport wird sorgfältig und passend zum Gegenstand abgestimmt."],
+      ["Ist Abholung und Lieferung möglich?", "Ja, Abholung und Transport zum gewünschten Ziel können angefragt werden."],
+      ["Gibt es Transporte für Gewerbekunden?", "Ja, auch gewerbliche Möbel- oder Objekttransporte sind möglich."],
+      ["Kann ich Montage ergänzen?", "Ja, Transport und anschließende Montage können kombiniert werden."],
+      ["Was sollte ich in der Anfrage nennen?", "Gegenstände, Start- und Zielort, Termin sowie besondere Tragebedingungen helfen bei der Prüfung."],
+      ["Kann ich Fotos des Möbelstücks senden?", "Ja, optional können Bilder mit der Anfrage übermittelt werden."],
+      ["Erhalte ich sofort einen Preis?", "Nein, die Angaben werden erst persönlich geprüft und anschließend beantwortet."],
+      ["Fährt MTM in das Umland?", "Ja, das Einsatzgebiet umfasst Hannover & Umland."],
     ],
   },
   {
-    id: "montage",
     title: "Möbelmontage",
     questions: [
-      ["Welche Montagearbeiten bietet MTM an?", "MTM unterstützt beim Auf- und Abbau von Möbeln sowie bei ausgewählten Schrank- oder Küchenelementen."],
-      ["Kann ich nur eine Montage ohne Transport anfragen?", "Ja, Möbelmontage kann auch einzeln ohne zusätzlichen Transport angefragt werden."],
-      ["Wird auch eine Demontage übernommen?", "Ja, je nach Auftrag sind sowohl Aufbau als auch Demontage möglich."],
-      ["Kann die Montage direkt mit dem Umzug kombiniert werden?", "Ja, das ist eine häufig sinnvolle Kombination und kann direkt gemeinsam angefragt werden."],
-      ["Muss ich Werkzeuge bereitstellen?", "Nein, wichtige Details werden im Vorfeld abgestimmt. Sie müssen in der Anfrage nur den gewünschten Umfang beschreiben."],
-      ["Sind auch Schränke und Regale möglich?", "Ja, typische Möbelstücke wie Schränke, Regale oder ähnliche Einrichtungselemente können angefragt werden."],
-      ["Kann ich Fotos der Möbel schicken?", "Ja, Bilder helfen bei der Einschätzung und können optional hochgeladen werden."],
-      ["Wird sauber gearbeitet?", "Ja, auf der Webseite wird ausdrücklich eine ordentliche und sorgfältige Arbeitsweise betont."],
-      ["Ist Möbelmontage auch für Gewerbe möglich?", "Ja, auch gewerbliche Anfragen sind grundsätzlich möglich."],
-      ["Wie frage ich die Montage am besten an?", "Am einfachsten über den Anfrage-Assistenten mit Auswahl der Leistung Möbelmontage."],
+      ["Welche Möbel montiert MTM?", "Zum Beispiel Schränke, Regale und weitere geeignete Einrichtungselemente nach Abstimmung."],
+      ["Ist auch eine Demontage möglich?", "Ja, Auf- und Abbau können je nach Auftrag übernommen werden."],
+      ["Kann Montage separat angefragt werden?", "Ja, Möbelmontage ist auch ohne Transport möglich."],
+      ["Kann Montage zum Umzug ergänzt werden?", "Ja, das ist eine sinnvolle Kombination und kann zusammen angefragt werden."],
+      ["Kann ich Küchen- oder Schrankelemente anfragen?", "Ausgewählte Elemente können beschrieben und anschließend persönlich geprüft werden."],
+      ["Muss ich Werkzeug bereitstellen?", "Die Einzelheiten werden vorab abgestimmt; nennen Sie zunächst nur den gewünschten Umfang."],
+      ["Kann ich Bilder der Bauteile schicken?", "Ja, Fotos helfen bei der Einschätzung der Montage."],
+      ["Wird der Arbeitsplatz geschützt?", "MTM legt Wert auf eine sorgfältige und ordentliche Durchführung vor Ort."],
+      ["Ist die Montage für Gewerbe geeignet?", "Auch gewerbliche Montageanfragen können gestellt werden."],
+      ["Wie frage ich die Leistung an?", "Starten Sie den Assistenten und wählen Sie Möbelmontage."],
     ],
   },
   {
-    id: "entruempelung",
     title: "Entrümpelung & Entsorgung",
     questions: [
-      ["Welche Bereiche können entrümpelt werden?", "Zum Beispiel Wohnungen, Häuser, Keller, Garagen, Nebenräume oder ausgewählte Gewerbeflächen."],
-      ["Übernimmt MTM auch die Entsorgung?", "Ja, Entrümpelung und Entsorgung werden als kombinierte Leistung angeboten."],
-      ["Ist auch eine besenreine Übergabe möglich?", "Ja, bei passend vereinbartem Umfang ist eine saubere Übergabe möglich."],
-      ["Kann ich eine Haushaltsauflösung anfragen?", "Sie können den Umfang der Räumung individuell beschreiben. Danach wird persönlich geprüft, was genau umgesetzt werden kann."],
-      ["Sind Keller- und Garagenräumungen möglich?", "Ja, genau solche Bereiche werden auf der Webseite ausdrücklich genannt."],
-      ["Muss alles vorsortiert sein?", "Nicht zwingend. Im ersten Schritt reicht eine Beschreibung der Situation, danach wird der Ablauf abgestimmt."],
-      ["Kann ich Fotos von den Räumen hochladen?", "Ja, Bilder sind im Anfrage-Assistenten optional möglich und hilfreich."],
-      ["Sind diskrete Räumungen möglich?", "Ja, die Leistung wird als diskret und verlässlich beschrieben."],
-      ["Wird auch kurzfristig entrümpelt?", "Kurzfristige Anfragen sind möglich. Die konkrete Terminlage wird nach Anfrage geprüft."],
-      ["Wie fordere ich eine Entrümpelung an?", "Einfach auf der Webseite die passende Leistung auswählen und den Assistenten starten."],
+      ["Welche Räume können geräumt werden?", "Zum Beispiel Wohnung, Keller, Garage oder geeignete Gewerbeflächen."],
+      ["Übernimmt MTM auch die Entsorgung?", "Ja, die Entsorgung kann nach Abstimmung Teil der Leistung sein."],
+      ["Ist eine saubere Übergabe möglich?", "Eine saubere beziehungsweise besenreine Übergabe kann je nach Umfang abgestimmt werden."],
+      ["Kann ich eine Haushaltsauflösung anfragen?", "Ja, beschreiben Sie dafür Umfang und Situation im Anfrage-Assistenten."],
+      ["Werden Keller und Garagen geräumt?", "Ja, solche Räumungen können angefragt werden."],
+      ["Muss vorher sortiert werden?", "Nicht zwingend. Die Vorgehensweise wird nach der Anfrage persönlich geklärt."],
+      ["Helfen Fotos bei der Einschätzung?", "Ja, Fotos der Räume oder Gegenstände sind sehr hilfreich."],
+      ["Erfolgt die Räumung diskret?", "MTM legt Wert auf eine verlässliche und diskrete Durchführung."],
+      ["Sind kurzfristige Termine möglich?", "Die Verfügbarkeit wird nach Eingang der Anfrage persönlich geprüft."],
+      ["Wie starte ich eine Anfrage?", "Wählen Sie Entrümpelung & Entsorgung auf der Startseite aus."],
     ],
   },
   {
-    id: "ablauf",
-    title: "Ablauf, Termin & Angebot",
+    title: "Express & Entkernung",
     questions: [
-      ["Wie läuft eine Anfrage bei MTM ab?", "Sie wählen die passende Leistung aus, geben die wichtigsten Daten an und erhalten anschließend eine persönliche Rückmeldung."],
-      ["Muss ich sofort alles ausfüllen?", "Nein, der Assistent führt Schritt für Schritt durch die Anfrage und fragt nur passende Angaben ab."],
-      ["Kann ich einen Zeitraum statt eines festen Datums angeben?", "Ja, Sie können einen Wunschtermin oder einen alternativen Zeitraum angeben."],
-      ["Ist die Anfrage verbindlich?", "Nein, die Anfrage ist unverbindlich. Preis, Termin und Auftragsannahme werden erst nach persönlicher Prüfung bestätigt."],
-      ["Bekomme ich automatisch einen Preis angezeigt?", "Nein, MTM setzt bewusst auf persönliche Rückmeldung statt automatischer Preisversprechen."],
-      ["Kann ich auch telefonisch anfragen?", "Ja, auf jeder Seite ist die Telefonnummer gut sichtbar hinterlegt."],
-      ["Welche Informationen sollte ich bereithalten?", "Hilfreich sind Leistung, Ort, Terminwunsch, Umfang und mögliche Besonderheiten wie Etagen, Aufzug oder besondere Gegenstände."],
-      ["Kann ich zusätzliche Hinweise angeben?", "Ja, dafür gibt es im Anfrage-Assistenten passende Felder für Notizen und Besonderheiten."],
-      ["Was passiert nach dem Absenden?", "Ihre Angaben werden geprüft und MTM meldet sich anschließend persönlich zurück."],
-      ["Kann ich mehrere Leistungen in einer Anfrage nennen?", "Ja, das ist möglich. Zusätzliche Leistungen oder Hinweise können direkt in der Anfrage angegeben werden."],
+      ["Was ist ein Expresstransport?", "Ein eilig benötigter Transport mit 3,5-Tonnen-LKW inklusive Fahrer nach Verfügbarkeit."],
+      ["Sind kurzfristige Fahrten möglich?", "Ja, gerade dafür ist die Anfrage für Expresstransporte vorgesehen."],
+      ["Welche Angaben braucht MTM für Express?", "Start, Ziel, Transportgut, Dringlichkeit und gewünschter Zeitpunkt sind besonders wichtig."],
+      ["Kann Express mit Tragehilfe kombiniert werden?", "Zusatzleistungen können beschrieben und anschließend geprüft werden."],
+      ["Was versteht MTM unter Entkernung?", "Ausgewählte Rückbauarbeiten an geeigneten Objekten nach vorheriger Prüfung und Absprache."],
+      ["Welche Entkernungsarbeiten sind möglich?", "Mögliche Arbeiten werden erst nach Beschreibung beziehungsweise Besichtigung konkret abgestimmt."],
+      ["Ist eine Besichtigung nötig?", "Bei Entkernungsarbeiten ist eine persönliche Prüfung in der Regel sinnvoll."],
+      ["Kann Entkernung direkt online gebucht werden?", "Nein, die Anfrage dient zuerst der Prüfung und Abstimmung des Auftrags."],
+      ["Kann ich Bilder für Entkernung senden?", "Ja, Bilder der Räume helfen bei der ersten Einordnung."],
+      ["Welche Auswahl nutze ich im Assistenten?", "Für Express wählen Sie Expresstransporte, für Rückbauarbeiten Entkernung."],
     ],
   },
   {
-    id: "kontakt",
-    title: "Einsatzgebiet, Kontakt & Organisation",
+    title: "Ablauf & Kontakt",
     questions: [
-      ["In welchem Gebiet ist MTM tätig?", "Schwerpunkt ist Hannover mit dem Umland sowie der gesamten Region Hannover."],
-      ["Wo finde ich die Kontaktmöglichkeiten?", "Telefon, E-Mail und Anfrage-Assistent sind auf der Webseite direkt erreichbar."],
-      ["Kann ich einen Rückruf wünschen?", "Ja, im Assistenten gibt es eine Option für einen Rückrufwunsch."],
-      ["Gibt es auch Expresstransporte?", "Ja, Expresstransporte mit 3,5-Tonnen-LKW inklusive Fahrer sind als eigene Leistung vorgesehen."],
-      ["Kann ich auch eine sonstige Anfrage stellen?", "Ja, dafür gibt es im Assistenten die Auswahl Sonstige Anfrage."],
-      ["Ist die Webseite auch mobil nutzbar?", "Ja, die Seite ist so aufgebaut, dass Anfragen auch mobil übersichtlich gestartet werden können."],
-      ["Kann ich später weitere Bilder oder Infos nachreichen?", "Ja, weitere Informationen können bei der Rückmeldung oder nach Absprache ergänzt werden."],
-      ["Ist die Leistung nur für Privatkunden gedacht?", "Nein, sowohl Privatkunden als auch gewerbliche Kunden können passende Leistungen anfragen."],
-      ["Welche Leistungen gibt es auf der Webseite?", "Aktuell werden Umzug, Möbeltransport, Möbelmontage, Entrümpelung & Entsorgung, Expresstransporte und auf Anfrage auch Entkernung genannt."],
-      ["Wie starte ich am schnellsten?", "Am schnellsten über den Anfrage-Assistenten oder direkt telefonisch unter der angegebenen Rufnummer."],
+      ["Wie läuft eine Anfrage ab?", "Sie wählen eine Leistung aus, geben Eckdaten an und MTM meldet sich persönlich zurück."],
+      ["Muss ich ein langes Formular ausfüllen?", "Nein, der Assistent fragt die Angaben schrittweise ab."],
+      ["Kann ich auch telefonisch anfragen?", "Ja, MTM ist telefonisch unter der auf der Webseite angegebenen Nummer erreichbar."],
+      ["Kann ich einen Rückruf wünschen?", "Ja, diese Option steht im Anfrage-Assistenten zur Verfügung."],
+      ["Ist die Anfrage kostenlos?", "Die Anfrage ist unverbindlich. Eine konkrete Beauftragung erfolgt erst nach Abstimmung."],
+      ["Bekomme ich automatisch einen Preis?", "Nein, Preis und Termin werden persönlich geprüft und abgestimmt."],
+      ["In welcher Region arbeitet MTM?", "MTM ist in Hannover & Umland beziehungsweise der Region Hannover im Einsatz."],
+      ["Können mehrere Leistungen kombiniert werden?", "Ja, zusätzliche Leistungen können in der Anfrage beschrieben werden."],
+      ["Wann sollte ich Fotos mitschicken?", "Bei Möbeln, Räumungen, Montage oder besonderen Bedingungen sind Fotos besonders hilfreich."],
+      ["Was passiert nach dem Absenden?", "MTM prüft Ihre Angaben und meldet sich zur weiteren Abstimmung zurück."],
     ],
   },
 ];
@@ -121,71 +115,56 @@ export default function FaqClient() {
       <Header onOpenAssistant={() => openAssistant()} />
       <main>
         <section className="brand-gradient text-white">
-          <div className="container-shell py-12 sm:py-16">
+          <div className="container-shell py-10 sm:py-12">
             <p className="eyebrow-light">FAQ</p>
-            <h1 className="mt-5 max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[3.7rem] lg:leading-[1.08]">
-              Häufige Fragen klar und übersichtlich beantwortet.
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/90">
-              Die FAQ ist in 6 Themenbereiche gegliedert und beantwortet die wichtigsten Fragen zu Leistungen, Ablauf, Terminen, Kontakt und Organisation.
+            <h1 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-tight sm:text-4xl">Häufige Fragen auf einen Blick.</h1>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-white/90">
+              Öffnen Sie einfach den passenden Bereich. Jede Kategorie enthält 10 kurze Antworten.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <button type="button" onClick={() => openAssistant()} className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-5 py-4 font-bold text-accent-dark transition hover:bg-rose-50">
-                Anfrage starten<ArrowRight size={18} />
-              </button>
-              <a href={`tel:${company.phoneHref}`} className="hero-button-secondary justify-center py-4"><Phone size={17} />{company.phoneDisplay}</a>
-              <Link href="/leistungen" className="hero-button-secondary justify-center py-4">Leistungen ansehen</Link>
-            </div>
           </div>
         </section>
 
-        <section className="py-16 sm:py-20">
+        <section className="py-12 sm:py-16">
           <div className="container-shell">
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid items-start gap-5 lg:grid-cols-3">
               {faqSections.map((section) => (
-                <a key={section.id} href={`#${section.id}`} className="rounded-[1.5rem] border border-rose-100 bg-white px-5 py-5 shadow-card transition hover:-translate-y-0.5 hover:border-rose-200 hover:bg-rose-50">
-                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent-dark">Bereich</p>
-                  <h2 className="mt-3 text-2xl font-bold tracking-tight text-navy">{section.title}</h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">10 Fragen & Antworten in diesem Bereich</p>
-                </a>
-              ))}
-            </div>
-
-            <div className="mt-12 space-y-8">
-              {faqSections.map((section) => (
-                <section key={section.id} id={section.id} className="scroll-mt-28 rounded-[2rem] border border-rose-100 bg-white p-6 shadow-card sm:p-8">
-                  <div className="max-w-3xl">
-                    <p className="eyebrow">FAQ-Bereich</p>
-                    <h2 className="mt-4 text-3xl font-bold tracking-tight text-navy sm:text-4xl">{section.title}</h2>
-                    <p className="mt-4 text-sm leading-7 text-slate-600">Hier finden Sie 10 typische Fragen und kurze, verständliche Antworten zu diesem Thema.</p>
-                  </div>
-                  <div className="mt-8 space-y-3">
+                <details key={section.title} className="group overflow-hidden rounded-[1.6rem] border border-rose-100 bg-white shadow-card">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 text-left">
+                    <span>
+                      <span className="eyebrow">FAQ-Bereich</span>
+                      <span className="mt-3 block text-xl font-bold text-navy">{section.title}</span>
+                      <span className="mt-2 block text-sm text-slate-500">10 Fragen & Antworten</span>
+                    </span>
+                    <ChevronDown size={20} className="shrink-0 text-accent-dark transition group-open:rotate-180" />
+                  </summary>
+                  <div className="space-y-2 border-t border-rose-100 bg-rose-50/35 p-4">
                     {section.questions.map(([question, answer], index) => (
-                      <details key={question} className="group rounded-[1.35rem] border border-rose-100 bg-rose-50/55 px-5 py-4 open:bg-white open:shadow-sm">
-                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-base font-bold text-navy">
+                      <details key={question} className="group/question rounded-xl border border-rose-100 bg-white px-4 py-3">
+                        <summary className="flex cursor-pointer list-none items-start justify-between gap-3 text-sm font-semibold leading-6 text-navy">
                           <span>{index + 1}. {question}</span>
-                          <ChevronDown size={18} className="shrink-0 text-accent-dark transition group-open:rotate-180" />
+                          <ChevronDown size={16} className="mt-1 shrink-0 text-accent-dark transition group-open/question:rotate-180" />
                         </summary>
-                        <p className="pt-4 text-sm leading-7 text-slate-600">{answer}</p>
+                        <p className="pt-3 text-sm leading-7 text-slate-600">{answer}</p>
                       </details>
                     ))}
                   </div>
-                </section>
+                </details>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="bg-soft py-16 sm:py-20">
-          <div className="container-shell overflow-hidden rounded-[2rem] bg-white p-7 shadow-card sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
-            <div className="max-w-3xl">
+        <section className="bg-soft py-14 sm:py-16">
+          <div className="container-shell overflow-hidden rounded-[2rem] bg-white p-7 shadow-card sm:p-9 lg:flex lg:items-center lg:justify-between lg:gap-10">
+            <div className="max-w-2xl">
               <p className="eyebrow">Noch Fragen offen?</p>
-              <h2 className="section-heading">Dann starten Sie direkt eine unverbindliche Anfrage.</h2>
-              <p className="section-intro">Wenn Ihre Frage hier nicht beantwortet wurde, hilft der Anfrage-Assistent weiter oder Sie rufen direkt an.</p>
+              <h2 className="section-heading">Anfrage einfach persönlich klären.</h2>
+              <p className="section-intro">Der Assistent führt Sie Schritt für Schritt durch Ihren Auftrag. Alternativ erreichen Sie MTM telefonisch.</p>
             </div>
             <div className="mt-6 flex flex-wrap gap-3 lg:mt-0">
-              <button type="button" onClick={() => openAssistant()} className="button-primary"><Sparkles size={16} />Anfrage-Assistent</button>
-              <a href={`tel:${company.phoneHref}`} className="button-secondary"><Phone size={16} />Anrufen</a>
+              <button type="button" onClick={() => openAssistant()} className="button-primary"><Sparkles size={16} />Anfrage starten</button>
+              <a href={`tel:${company.phoneHref}`} className="button-secondary"><Phone size={16} />{company.phoneDisplay}</a>
+              <Link href="/leistungen" className="button-secondary">Leistungen<ArrowRight size={16} /></Link>
             </div>
           </div>
         </section>

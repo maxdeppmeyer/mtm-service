@@ -10,13 +10,13 @@ import {
   ClipboardCheck,
   Clock3,
   FolderOpen,
-  Images,
   Mail,
   MapPin,
   Package,
   Phone,
   ShieldCheck,
   Sparkles,
+  Trash2,
   Truck,
   Wrench,
 } from "lucide-react";
@@ -44,23 +44,28 @@ const serviceIcons = {
   umzug: Truck,
   moebeltransport: Package,
   moebelmontage: Wrench,
-  entruempelung: Building2,
+  entruempelung: Trash2,
   expresstransport: Clock3,
+  entkernung: Building2,
 };
 
-const placeholders = [
-  {
-    title: "Referenzen & Projektbeispiele",
-    text: "Hier können später echte Referenzen, kurze Projektbeschreibungen oder Kundenbeispiele eingefügt werden.",
-    icon: FolderOpen,
-    button: "Platzhalter für Referenzen",
-  },
-  {
-    title: "Bildergalerie & Einblicke",
-    text: "Dieser Bereich ist als Platzhalter für echte Einsatzbilder, Vorher-Nachher-Fotos oder Fahrzeuge vorgesehen.",
-    icon: Images,
-    button: "Platzhalter für Galerie",
-  },
+const galleryImages = [
+  { src: "/images/hero-team-mtm-20260527-v4.webp", alt: "MTM Team vor den Firmenfahrzeugen", wide: true },
+  { src: "/images/leistung-umzug-mtm-20260527-v4.webp", alt: "MTM Fahrzeug im Einsatz", wide: false },
+  { src: "/images/leistung-moebeltransport-mtm-20260527-v4.webp", alt: "Beladenes MTM Fahrzeug bei einem Möbeltransport", wide: false },
+  { src: "/images/leistung-moebelmontage-mtm-20260527-v4.webp", alt: "Mitarbeiter bei der Möbelmontage", wide: false },
+  { src: "/images/leistung-entruempelung-mtm-20260527-v4.webp", alt: "Geräumte Garage nach einer Räumung", wide: false },
+  { src: "/images/leistung-expresstransport-mtm-20260527-v4.webp", alt: "MTM LKW bereit für einen Transport", wide: false },
+  { src: "/images/galerie-einsatz-umzug-mtm-20260527-v4.webp", alt: "MTM Einsatz bei einem Umzug", wide: true },
+  { src: "/images/galerie-montage-01-mtm-20260527-v4.webp", alt: "Montage eines Schrankelements", wide: false },
+  { src: "/images/galerie-montage-02-mtm-20260527-v4.webp", alt: "Möbelmontage während eines Kundenauftrags", wide: false },
+  { src: "/images/galerie-innenraum-01-mtm-20260527-v4.webp", alt: "Sauber vorbereiteter Innenraum mit Regalsystem", wide: false },
+  { src: "/images/galerie-moebel-01-mtm-20260527-v4.webp", alt: "Aufgestelltes Möbelstück nach einer Lieferung", wide: false },
+  { src: "/images/galerie-montage-03-mtm-20260527-v4.webp", alt: "Montierter Einbauschrank im Objekt", wide: false },
+  { src: "/images/galerie-lieferung-01-mtm-20260527-v4.webp", alt: "Beladenes Lieferfahrzeug am Einsatzort", wide: false },
+  { src: "/images/galerie-lieferung-02-mtm-20260527-v4.webp", alt: "Möbellieferung im Fahrzeug", wide: false },
+  { src: "/images/galerie-lieferung-03-mtm-20260527-v4.webp", alt: "Umzugskartons am Transportfahrzeug", wide: false },
+  { src: "/images/galerie-lieferung-04-mtm-20260527-v4.webp", alt: "Vorbereitete Kartons bei einem Transportauftrag", wide: false },
 ];
 
 export function HomeExperience() {
@@ -78,7 +83,7 @@ export function HomeExperience() {
       <main>
         <section className="hero-cover relative flex min-h-[calc(100svh-78px)] items-end overflow-hidden text-white" aria-labelledby="hero-heading">
           <Image
-            src="/images/teamfoto-mtm-2026.webp"
+            src="/images/hero-team-mtm-20260527-v4.webp"
             alt="Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen"
             fill
             priority
@@ -161,25 +166,38 @@ export function HomeExperience() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20" aria-labelledby="einblicke-heading">
+        <section className="py-16 sm:py-20" aria-labelledby="galerie-heading">
           <div className="container-shell">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div className="max-w-2xl">
-                <p className="eyebrow">Platzhalter-Bereiche</p>
-                <h2 id="einblicke-heading" className="section-heading">Referenzen und Einblicke können später ergänzt werden.</h2>
-                <p className="section-intro">Die folgenden Bereiche sind bewusst als Platzhalter vorbereitet, damit später schnell neue Inhalte ergänzt werden können.</p>
-              </div>
+            <div className="max-w-3xl">
+              <p className="eyebrow">Einblicke in Einsätze</p>
+              <h2 id="galerie-heading" className="section-heading">Echte Eindrücke aus Transport und Montage.</h2>
+              <p className="section-intro">Eine Auswahl vorhandener MTM-Aufnahmen aus Einsätzen, Montagearbeiten und Transportvorbereitungen.</p>
             </div>
-            <div className="mt-10 grid gap-6 lg:grid-cols-2">
-              {placeholders.map(({ title, text, icon: Icon, button }) => (
-                <article key={title} className="rounded-[1.8rem] border border-dashed border-rose-200 bg-white p-7 shadow-card sm:p-8">
-                  <span className="inline-flex rounded-2xl bg-rose-50 p-3 text-accent-dark"><Icon size={24} /></span>
-                  <h3 className="mt-5 text-2xl font-bold tracking-tight text-navy">{title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">{text}</p>
-                  <div className="mt-6 inline-flex rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-accent-dark">{button}</div>
-                </article>
+            <div className="mt-10 grid auto-rows-[205px] gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {galleryImages.map((image, index) => (
+                <figure key={image.src} className={`group relative overflow-hidden rounded-[1.4rem] bg-rose-50 shadow-card ${image.wide ? "sm:col-span-2 sm:row-span-2" : ""}`}>
+                  <Image src={image.src} alt={image.alt} fill sizes={image.wide ? "(max-width: 640px) 100vw, 50vw" : "(max-width: 640px) 100vw, 25vw"} className="object-cover transition duration-500 group-hover:scale-[1.03]" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/70 to-transparent px-4 pb-4 pt-10 opacity-0 transition group-hover:opacity-100">
+                    <span className="text-sm font-semibold text-white">{image.alt}</span>
+                  </div>
+                  {index === 0 && <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-accent-dark">MTM Team</span>}
+                </figure>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="bg-soft py-16 sm:py-20" aria-labelledby="referenzen-heading">
+          <div className="container-shell">
+            <article className="rounded-[1.8rem] border border-dashed border-rose-200 bg-white p-7 shadow-card sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+              <div className="max-w-3xl">
+                <span className="inline-flex rounded-2xl bg-rose-50 p-3 text-accent-dark"><FolderOpen size={24} /></span>
+                <p className="eyebrow mt-6">Platzhalter</p>
+                <h2 id="referenzen-heading" className="section-heading">Referenzen & Projektbeispiele</h2>
+                <p className="section-intro">Dieser Bereich ist vorbereitet, damit später konkrete Projekte, kurze Ergebnisse oder Kundenreferenzen mit Bild und Text ergänzt werden können.</p>
+              </div>
+              <div className="mt-7 shrink-0 rounded-full bg-rose-50 px-5 py-3 text-sm font-semibold text-accent-dark lg:mt-0">Inhalte folgen</div>
+            </article>
           </div>
         </section>
 
@@ -202,8 +220,8 @@ export function HomeExperience() {
                   ))}
                 </div>
               </div>
-              <div className="mt-10 rounded-[1.7rem] bg-white p-5 sm:p-8 lg:mt-0">
-                <Image src="/images/karte-region-hannover-2026.svg" alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland" width={900} height={640} className="h-auto w-full" />
+              <div className="mt-10 rounded-[1.7rem] bg-white p-4 sm:p-7 lg:mt-0">
+                <Image src="/images/karte-region-hannover-mtm-20260527-v4.webp" alt="Karte der Region Hannover mit Ortsnamen im Umland" width={1254} height={1254} className="h-auto w-full" />
               </div>
             </div>
           </div>
@@ -216,7 +234,7 @@ export function HomeExperience() {
                 <p className="eyebrow">Digitale Anfrage</p>
                 <h2 id="anfrage-heading" className="section-heading">Schnell starten – der Assistent fragt den Rest ab.</h2>
                 <p className="section-intro">
-                  Statt eines langen Formulars starten Sie einfach mit der passenden Leistung. Der KI-Assistent führt anschließend Schritt für Schritt durch die Anfrage.
+                  Statt eines langen Formulars starten Sie einfach mit der passenden Leistung. Der Anfrage-Assistent führt anschließend Schritt für Schritt durch die Anfrage.
                 </p>
                 <div className="mt-7 space-y-3 rounded-[1.4rem] bg-rose-50 p-5 text-sm leading-7 text-slate-700">
                   <p className="flex items-start gap-3"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent-dark" />Nur die Angaben angeben, die wirklich zum Auftrag passen.</p>
@@ -251,8 +269,8 @@ export function HomeExperience() {
             <div className="overflow-hidden rounded-[2rem] border border-rose-100 bg-white p-7 shadow-card sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
               <div className="max-w-3xl">
                 <p className="eyebrow">FAQ</p>
-                <h2 id="faq-teaser-heading" className="section-heading">Häufige Fragen jetzt auf einer eigenen Seite.</h2>
-                <p className="section-intro">Auf der neuen FAQ-Seite finden Sie 6 übersichtliche Themenbereiche mit jeweils 10 Fragen und Antworten zu Leistungen, Ablauf, Terminen und Organisation.</p>
+                <h2 id="faq-teaser-heading" className="section-heading">Häufige Fragen auf einer eigenen Seite.</h2>
+                <p className="section-intro">Die FAQ-Seite ist in 6 kompakte Themenfelder gegliedert und beantwortet wichtige Fragen zu Leistungen, Ablauf, Terminen und Organisation.</p>
               </div>
               <div className="mt-6 lg:mt-0">
                 <Link href="/faq" className="button-primary">Zur FAQ-Seite<ArrowRight size={17} /></Link>

@@ -24,10 +24,6 @@ export function Footer() {
         <div>
           <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-rose-200/70">Übersicht</h2>
           <div className="flex flex-col gap-3 text-sm text-rose-50">
-            <Link href="/" className="hover:text-white">Startseite</Link>
-            <Link href="/leistungen" className="hover:text-white">Leistungen im Detail</Link>
-            <Link href="/faq" className="hover:text-white">FAQ</Link>
-            <Link href="/#anfrage" className="hover:text-white">Anfrage senden</Link>
             <Link href="/impressum" className="hover:text-white">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white">Datenschutz</Link>
           </div>
