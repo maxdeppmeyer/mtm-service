@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock3, MapPin, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock3, Sparkles } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryAssistant } from "@/components/InquiryAssistant";
+import { RegionPanel } from "@/components/RegionPanel";
 import { company, extraServices, ServiceId, services } from "@/lib/company";
 import { useState } from "react";
 
@@ -105,38 +106,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20">
-          <div className="container-shell">
-            <div className="brand-gradient overflow-hidden rounded-[2rem] px-7 py-8 text-white shadow-soft sm:px-10 sm:py-12 lg:px-12 lg:py-14">
-              <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
-                <div>
-                  <p className="eyebrow-light">Einsatzgebiet</p>
-                  <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Region Hannover im Überblick</h2>
-                  <p className="mt-5 max-w-xl text-base leading-8 text-white/90">
-                    MTM ist regional erreichbar und unterstützt Sie bei passenden Aufträgen in Hannover sowie den umliegenden Städten und Gemeinden der Region.
-                  </p>
-                  <div className="mt-7 inline-flex items-start gap-3 rounded-[1.3rem] border border-white/15 bg-white/10 px-4 py-4 text-sm leading-6 text-white/90 backdrop-blur-sm">
-                    <MapPin size={18} className="mt-0.5 shrink-0 text-white" />
-                    <span>Einsatzgebiet: {company.area}<br />Mit Schwerpunkt in Hannover und der gesamten Region Hannover.</span>
-                  </div>
-                  <div className="mt-7 flex flex-wrap gap-3">
-                    <a href={`tel:${company.phoneHref}`} className="inline-flex items-center gap-2 rounded-2xl border border-white/30 bg-white px-5 py-4 font-bold text-accent-dark transition hover:bg-rose-50"><Phone size={16} />{company.phoneDisplay}</a>
-                    <button type="button" onClick={() => openAssistant()} className="inline-flex items-center gap-2 rounded-2xl border border-white/25 bg-white/10 px-5 py-4 font-bold text-white transition hover:bg-white/20"><Sparkles size={16} />Anfrage starten</button>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center lg:justify-end">
-                  <Image
-                    src="/images/karte-region-hannover-outline-mtm-20260527-v5.svg"
-                    alt="Stilisierte Karte der Region Hannover mit Hannover und den umliegenden Städten und Gemeinden"
-                    width={860}
-                    height={640}
-                    className="h-auto w-full max-w-[610px]"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <RegionPanel variant="services" onInquiry={() => openAssistant()} />
 
         <section className="bg-soft py-16 sm:py-20">
           <div className="container-shell overflow-hidden rounded-[2rem] bg-white p-7 shadow-card sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">

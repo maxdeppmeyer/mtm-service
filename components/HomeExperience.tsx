@@ -23,6 +23,7 @@ import {
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryAssistant } from "@/components/InquiryAssistant";
+import { RegionPanel } from "@/components/RegionPanel";
 import { company, extraServices, ServiceId, services } from "@/lib/company";
 import { useState } from "react";
 
@@ -33,12 +34,7 @@ const quickFacts = [
   { icon: BadgeCheck, title: "Passende Leistungen", text: "Umzug, Transport, Montage, Entkernung, Express und Entrümpelung aus einer Hand." },
 ];
 
-const process = [
-  { step: "1", title: "Anfrage", text: "Sie starten Ihre Anfrage online oder telefonisch mit den wichtigsten Eckdaten." },
-  { step: "2", title: "Prüfung", text: "MTM meldet sich persönlich zurück und klärt offene Punkte zum Auftrag." },
-  { step: "3", title: "Abstimmung", text: "Termin, Umfang und Ablauf werden passend und transparent abgestimmt." },
-  { step: "4", title: "Durchführung", text: "Der Auftrag wird zuverlässig, ordentlich und termingerecht umgesetzt." },
-];
+
 
 const homeServices = [
   {
@@ -132,7 +128,7 @@ const galleryImages = [
     alt: "MTM Fahrzeug bei einem Umzugseinsatz.",
   },
   {
-    src: "/images/leistung-entkernung-mtm-20260527-v5.webp",
+    src: "/images/leistung-entkernung-mtm-20260527-v6.webp",
     alt: "Innenraum während einer Entkernung oder Sanierung.",
   },
   {
@@ -337,39 +333,7 @@ export function HomeExperience() {
           </div>
         </section>
 
-        <section id="ablauf" className="scroll-mt-28 py-16 sm:py-20" aria-labelledby="ablauf-heading">
-          <div className="container-shell">
-            <div className="brand-gradient relative overflow-hidden rounded-[2rem] px-6 py-8 text-white shadow-soft sm:px-10 sm:py-12 lg:px-12 lg:py-14">
-              <div className="relative lg:grid lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
-                <div>
-                  <p className="eyebrow-light">Einsatzgebiet & Ablauf</p>
-                  <h2 id="ablauf-heading" className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Hannover & Umland</h2>
-                  <p className="mt-5 max-w-xl text-base leading-8 text-white/90">
-                    MTM unterstützt bei Transport-, Montage-, Umzugs-, Express-, Entkernungs- und Räumungsaufträgen in Hannover und der umliegenden Region.
-                  </p>
-                  <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                    {process.map((item) => (
-                      <div key={item.step} className="rounded-[1.4rem] border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
-                        <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-extrabold text-accent-dark">{item.step}</div>
-                        <h3 className="text-base font-bold text-white">{item.title}</h3>
-                        <p className="mt-2 text-sm leading-6 text-white/90">{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="relative mt-10 flex items-center justify-center lg:mt-0 lg:justify-end">
-                  <Image
-                    src="/images/karte-region-hannover-outline-mtm-20260527-v5.svg"
-                    alt="Stilisierte Karte der Region Hannover mit Hannover und den umliegenden Städten und Gemeinden"
-                    width={860}
-                    height={640}
-                    className="h-auto w-full max-w-[610px]"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <RegionPanel variant="home" onInquiry={() => openAssistant()} />
 
         <section id="anfrage" className="scroll-mt-28 bg-soft py-16 sm:py-20" aria-labelledby="anfrage-heading">
           <div className="container-shell">

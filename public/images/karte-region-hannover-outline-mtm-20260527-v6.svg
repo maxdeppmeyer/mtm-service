@@ -42,11 +42,11 @@
     <text x="556" y="127">Burgwedel</text>
     <text x="132" y="270">Wunstorf</text>
     <text x="274" y="252">Garbsen</text>
-    <text x="423" y="201"><tspan x="423" dy="0">Langen-</tspan><tspan x="423" dy="16">hagen</tspan></text>
+    <text x="423" y="205" class="small">Langenhagen</text>
     <text x="537" y="220">Isernhagen</text>
     <text x="632" y="238">Burgdorf</text>
     <text x="731" y="229">Uetze</text>
-    <text x="178" y="342" class="small"><tspan x="178" dy="0">Barsing-</tspan><tspan x="178" dy="15">hausen</tspan></text>
+    <text x="178" y="344" class="small">Barsinghausen</text>
     <text x="307" y="330">Seelze</text>
     <g filter="url(#pinShadow)">
       <path d="M457 266c-16 0-29 13-29 29 0 22 29 48 29 48s29-26 29-48c0-16-13-29-29-29Z" fill="#fff"/>
@@ -55,8 +55,8 @@
     <text x="457" y="370" class="hannover">Hannover</text>
     <text x="608" y="320">Lehrte</text>
     <text x="270" y="403">Gehrden</text>
-    <text x="359" y="411" class="small"><tspan x="359" dy="0">Ronnen-</tspan><tspan x="359" dy="15">berg</tspan></text>
-    <text x="459" y="430" class="small"><tspan x="459" dy="0">Hem-</tspan><tspan x="459" dy="15">mingen</tspan></text>
+    <text x="359" y="414" class="small">Ronnenberg</text>
+    <text x="459" y="432" class="small">Hemmingen</text>
     <text x="593" y="393">Sehnde</text>
     <text x="272" y="476">Wennigsen</text>
     <text x="392" y="488">Pattensen</text>

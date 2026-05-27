@@ -138,7 +138,7 @@ export const extraServices = [
     title: "Entkernung",
     description:
       "Ausgewählte Entkernungsarbeiten nach persönlicher Prüfung und Abstimmung des Umfangs.",
-    image: "/images/leistung-entkernung-mtm-20260527-v5.webp",
+    image: "/images/leistung-entkernung-mtm-20260527-v6.webp",
     alt: "Innenraum im Zustand einer Renovierung und Entkernung",
     points: [
       "Entfernung von Böden, Wänden, Decken oder Einbauten nach Absprache",
