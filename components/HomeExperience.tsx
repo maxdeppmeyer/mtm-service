@@ -194,7 +194,7 @@ export function HomeExperience() {
                 <p className="eyebrow">Digitale Anfrage</p>
                 <h2 id="anfrage-heading" className="section-heading">Schnell starten – der Assistent fragt den Rest ab.</h2>
                 <p className="section-intro">
-                  Statt eines langen Formulars starten Sie einfach mit der passenden Leistung. Der KI-Assistent führt anschließend Schritt für Schritt durch die Anfrage.
+                  Statt eines langen Formulars starten Sie einfach mit der passenden Leistung. Der Anfrage-Assistent führt anschließend Schritt für Schritt durch die Anfrage.
                 </p>
                 <div className="mt-7 space-y-3 rounded-[1.4rem] bg-rose-50 p-5 text-sm leading-7 text-slate-700">
                   <p className="flex items-start gap-3"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent-dark" />Nur die Angaben angeben, die wirklich zum Auftrag passen.</p>
@@ -219,21 +219,6 @@ export function HomeExperience() {
                   </span>
                   <ArrowRight size={18} className="shrink-0 text-accent-dark transition group-hover:translate-x-1" />
                 </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 sm:py-20" aria-labelledby="faq-teaser-heading">
-          <div className="container-shell">
-            <div className="overflow-hidden rounded-[2rem] border border-rose-100 bg-white p-7 shadow-card sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
-              <div className="max-w-3xl">
-                <p className="eyebrow">FAQ</p>
-                <h2 id="faq-teaser-heading" className="section-heading">Häufige Fragen jetzt auf einer eigenen Seite.</h2>
-                <p className="section-intro">Auf der neuen FAQ-Seite finden Sie 6 übersichtliche Themenbereiche mit jeweils 10 Fragen und Antworten zu Leistungen, Ablauf, Terminen und Organisation.</p>
-              </div>
-              <div className="mt-6 lg:mt-0">
-                <Link href="/faq" className="button-primary">Zur FAQ-Seite<ArrowRight size={17} /></Link>
               </div>
             </div>
           </div>

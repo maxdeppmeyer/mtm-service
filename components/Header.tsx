@@ -31,7 +31,7 @@ export function Header({ onOpenAssistant }: { onOpenAssistant: () => void }) {
           </a>
           <button type="button" onClick={onOpenAssistant} className="button-primary rounded-full px-5 py-3 text-sm">
             <Sparkles size={16} />
-            KI-Assistent
+            Anfrage-Assistent
           </button>
         </div>
 
@@ -60,7 +60,7 @@ export function Header({ onOpenAssistant }: { onOpenAssistant: () => void }) {
             </a>
             <button type="button" onClick={() => { setMenuOpen(false); onOpenAssistant(); }} className="button-primary mt-1 justify-center">
               <Sparkles size={17} />
-              KI-Assistent starten
+              Anfrage-Assistent
             </button>
           </div>
         </div>

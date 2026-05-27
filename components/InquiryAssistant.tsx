@@ -185,7 +185,7 @@ export function InquiryAssistant({ open, defaultService, onServiceChange, onClos
       <div ref={dialogRef} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="assistant-title" className="flex max-h-[96svh] w-full max-w-2xl flex-col rounded-t-[1.75rem] bg-white shadow-2xl outline-none sm:max-h-[92vh] sm:rounded-[1.75rem]">
         <div className="flex items-start justify-between border-b border-slate-100 px-5 py-5 sm:px-7">
           <div>
-            <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-accent-dark">Digitaler Anfrage-Assistent</p>
+            <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-accent-dark">Anfrage-Assistent</p>
             <h2 id="assistant-title" className="text-xl font-bold text-navy">In wenigen Schritten zur Anfrage</h2>
           </div>
           <button type="button" onClick={onClose} className="rounded-full p-2 text-slate-500 hover:bg-slate-100" aria-label="Anfrage-Assistent schließen"><X size={22} /></button>

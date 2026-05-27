@@ -13,7 +13,7 @@ import { useState } from "react";
 const detailActions = [
   "Persönliche Rückmeldung statt automatischer Preisversprechen",
   "Geeignet für Privat- und Gewerbekunden in Hannover & Umland",
-  "Anfrage bequem über den Schritt-für-Schritt-Assistenten",
+  "Anfrage bequem über den Anfrage-Assistenten",
 ];
 
 export default function ServicesPage() {

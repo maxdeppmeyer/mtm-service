@@ -13,7 +13,7 @@ export function Footer() {
             Zuverlässige Unterstützung bei Umzügen, Möbeltransporten, Montagen, Expresstransporten und Entrümpelungen in Hannover & Umland.
           </p>
           <Link href="/ueber-uns" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-rose-200">
-            Über uns & Einblicke <ArrowRight size={15} />
+            Über uns <ArrowRight size={15} />
           </Link>
         </div>
         <div>

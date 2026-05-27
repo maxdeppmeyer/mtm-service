@@ -44,9 +44,9 @@ export default function DatenschutzPage() {
       </ul>
       <p>Die Daten werden ausschließlich zur Prüfung und Bearbeitung Ihrer Anfrage sowie zur Kontaktaufnahme verwendet. Das Absenden einer Anfrage führt nicht automatisch zu einem Vertrag oder einer verbindlichen Terminbestätigung.</p>
 
-      <h2>6. Digitaler Anfrage-Assistent</h2>
-      <p>Der digitale Anfrage-Assistent führt Sie schrittweise durch die Erfassung Ihres Anliegens. In der ersten Version werden Ihre Angaben strukturiert zusammengestellt und anschließend wie eine Anfrage verarbeitet. Ein automatischer Preis, eine verbindliche Terminbestätigung oder eine automatische Auftragsannahme erfolgt nicht.</p>
-      <p>Während der Eingabe können Angaben in Ihrem Browser vorübergehend gespeichert werden, damit Sie den Assistenten schließen und später fortsetzen können. Diese Daten werden nach erfolgreichem Absenden entfernt und können von Ihnen durch Zurücksetzen des Assistenten gelöscht werden.</p>
+      <h2>6. Anfrage-Assistent</h2>
+      <p>Der Anfrage-Assistent führt Sie schrittweise durch die Erfassung Ihres Anliegens. In der ersten Version werden Ihre Angaben strukturiert zusammengestellt und anschließend wie eine Anfrage verarbeitet. Ein automatischer Preis, eine verbindliche Terminbestätigung oder eine automatische Auftragsannahme erfolgt nicht.</p>
+      <p>Während der Eingabe können Angaben in Ihrem Browser vorübergehend gespeichert werden, damit Sie den Anfrage-Assistenten schließen und später fortsetzen können. Diese Daten werden nach erfolgreichem Absenden entfernt und können von Ihnen durch Zurücksetzen des Anfrage-Assistenten gelöscht werden.</p>
 
       <h2>7. Hochgeladene Fotos</h2>
       <p>Sie können freiwillig Fotos hochladen, um die Anfrage besser beurteilen zu lassen. Laden Sie nur Bilder hoch, deren Übermittlung zulässig ist und die keine unnötigen sensiblen Informationen enthalten. Die technische Umsetzung begrenzt die Uploads auf Bilddateien und eine maximale Dateigröße.</p>

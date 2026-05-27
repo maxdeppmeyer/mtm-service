@@ -5,7 +5,7 @@ import FaqClient from "./FaqClient";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Häufige Fragen zu Umzug, Möbeltransport, Möbelmontage, Entrümpelung, Expresstransporten sowie zum Ablauf bei MTM in Hannover & Umland.",
+    "FAQ-Bereiche zu Umzug, Möbeltransport, Montage, Entrümpelung, Entkernung, Expresstransporten und zum Ablauf bei MTM in Hannover & Umland.",
   alternates: { canonical: `${company.website}/faq` },
 };
 

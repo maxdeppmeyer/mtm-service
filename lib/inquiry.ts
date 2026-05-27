@@ -23,7 +23,7 @@ export function buildInquiryEmailText(data: InquirySubmission): string {
   return [
     "Neue unverbindliche Anfrage über die MTM-Webseite",
     "",
-    `Quelle: ${data.source === "assistent" ? "Digitaler Anfrage-Assistent" : "Klassisches Formular"}`,
+    `Quelle: ${data.source === "assistent" ? "Anfrage-Assistent" : "Klassisches Formular"}`,
     `Leistung: ${serviceTitle(data.service)}`,
     `Name: ${data.name}`,
     `Telefon: ${data.phone}`,
