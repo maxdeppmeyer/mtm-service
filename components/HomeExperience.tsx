@@ -108,54 +108,56 @@ const placeholders = [
 
 const galleryImages = [
   {
-    src: "/images/gallery-teamfoto-mtm-2026.webp",
+    src: "/images/hero-team-mtm-20260527-v5.webp",
     alt: "Das Team von MTM vor den Firmenfahrzeugen.",
-    title: "Team & Fahrzeuge",
   },
   {
-    src: "/images/gallery-moebelmontage-mtm-2026.webp",
+    src: "/images/leistung-moebelmontage-mtm-20260527-v5.webp",
     alt: "MTM Mitarbeiter bei der Möbelmontage in einem Wohnraum.",
-    title: "Möbelmontage vor Ort",
   },
   {
-    src: "/images/gallery-truck-front-mtm-2026.webp",
-    alt: "MTM Transportfahrzeug vor einem Gebäude.",
-    title: "Regional im Einsatz",
+    src: "/images/leistung-entruempelung-mtm-20260527-v5.webp",
+    alt: "Geräumte Garage nach einem MTM Einsatz.",
   },
   {
-    src: "/images/gallery-truck-side-mtm-2026.webp",
-    alt: "MTM Transportfahrzeug mit Firmenbeschriftung in Seitenansicht.",
-    title: "Transportfahrzeug",
+    src: "/images/leistung-moebeltransport-mtm-20260527-v5.webp",
+    alt: "MTM Mitarbeiter im beladenen Transportfahrzeug.",
   },
   {
-    src: "/images/gallery-ladetruck-mtm-2026.webp",
-    alt: "Beladener MTM LKW mit Möbeln und Einrichtung.",
-    title: "Umzug & Beladung",
+    src: "/images/leistung-expresstransport-mtm-20260527-v5.webp",
+    alt: "MTM Transportfahrzeug für kurzfristige Transportaufträge.",
   },
   {
-    src: "/images/gallery-entruempelung-mtm-2026.webp",
-    alt: "MTM Mitarbeiter bei einer Entrümpelung.",
-    title: "Entrümpelung",
+    src: "/images/leistung-umzug-mtm-20260527-v5.webp",
+    alt: "MTM Fahrzeug bei einem Umzugseinsatz.",
   },
   {
-    src: "/images/gallery-regalraum-mtm-2026.webp",
-    alt: "Montierte Regalsysteme in einem Raum.",
-    title: "Montageergebnis",
+    src: "/images/leistung-entkernung-mtm-20260527-v5.webp",
+    alt: "Innenraum während einer Entkernung oder Sanierung.",
   },
   {
-    src: "/images/gallery-schrank-mtm-2026.webp",
-    alt: "Aufgebauter Schrank in einem leeren Raum.",
-    title: "Schrankmontage",
+    src: "/images/galerie-montage-detail-mtm-20260527-v5.webp",
+    alt: "Detailaufnahme bei der Möbelmontage.",
   },
   {
-    src: "/images/gallery-garderobe-mtm-2026.webp",
+    src: "/images/galerie-regalraum-mtm-20260527-v5.webp",
+    alt: "Aufgestellte Regale in einem Innenraum.",
+  },
+  {
+    src: "/images/galerie-schrank-mtm-20260527-v5.webp",
+    alt: "Montierter Schrank in einem Raum.",
+  },
+  {
+    src: "/images/galerie-garderobe-mtm-20260527-v5.webp",
     alt: "Montierte Garderobe mit Kleiderstangen.",
-    title: "Einrichtungen & Aufbau",
   },
   {
-    src: "/images/gallery-kisten-mtm-2026.webp",
-    alt: "Umzugskartons und Transportmaterial bei einem Einsatz.",
-    title: "Transport & Organisation",
+    src: "/images/galerie-transport-kartons-mtm-20260527-v5.webp",
+    alt: "Kartons bei einem Transportauftrag.",
+  },
+  {
+    src: "/images/galerie-einsatz-umzug-mtm-20260527-v5.webp",
+    alt: "MTM Fahrzeug beim Einsatz im Wohngebiet.",
   },
 ] as const;
 
@@ -175,7 +177,7 @@ export function HomeExperience() {
       <main>
         <section className="hero-cover relative flex min-h-[calc(100svh-78px)] items-end overflow-hidden text-white" aria-labelledby="hero-heading">
           <Image
-            src="/images/teamfoto-mtm-2026-v2.webp"
+            src="/images/hero-team-mtm-20260527-v5.webp"
             alt="Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen"
             fill
             priority
@@ -281,13 +283,8 @@ export function HomeExperience() {
 
               <div className="mt-8 grid gap-4 md:grid-cols-3">
                 {galleryImages.slice(0, 3).map((image) => (
-                  <div key={image.src} className="overflow-hidden rounded-[1.35rem] bg-rose-50 shadow-sm">
-                    <div className="relative aspect-[4/3]">
-                      <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                    </div>
-                    <div className="px-4 py-3">
-                      <p className="text-sm font-semibold text-navy">{image.title}</p>
-                    </div>
+                  <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-[1.35rem] bg-rose-50 shadow-sm">
+                    <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                   </div>
                 ))}
               </div>
@@ -298,29 +295,19 @@ export function HomeExperience() {
               >
                 <div className="md:hidden">
                   <div className="flex snap-x gap-4 overflow-x-auto pb-2">
-                    {galleryImages.map((image) => (
-                      <article key={image.src} className="min-w-[82%] snap-start overflow-hidden rounded-[1.35rem] border border-rose-100 bg-white shadow-sm">
-                        <div className="relative aspect-[4/3]">
-                          <Image src={image.src} alt={image.alt} fill sizes="80vw" className="object-cover" />
-                        </div>
-                        <div className="px-4 py-3">
-                          <p className="text-sm font-semibold text-navy">{image.title}</p>
-                        </div>
-                      </article>
+                    {galleryImages.slice(3).map((image) => (
+                      <div key={image.src} className="relative aspect-[4/3] min-w-[82%] snap-start overflow-hidden rounded-[1.35rem] border border-rose-100 bg-white shadow-sm">
+                        <Image src={image.src} alt={image.alt} fill sizes="80vw" className="object-cover" />
+                      </div>
                     ))}
                   </div>
                 </div>
 
                 <div className="hidden md:grid md:grid-cols-2 md:gap-4 xl:grid-cols-3">
-                  {galleryImages.map((image) => (
-                    <article key={image.src} className="overflow-hidden rounded-[1.35rem] border border-rose-100 bg-white shadow-sm">
-                      <div className="relative aspect-[4/3]">
-                        <Image src={image.src} alt={image.alt} fill sizes="(max-width: 1280px) 50vw, 33vw" className="object-cover" />
-                      </div>
-                      <div className="px-4 py-3">
-                        <p className="text-sm font-semibold text-navy">{image.title}</p>
-                      </div>
-                    </article>
+                  {galleryImages.slice(3).map((image) => (
+                    <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-[1.35rem] border border-rose-100 bg-white shadow-sm">
+                      <Image src={image.src} alt={image.alt} fill sizes="(max-width: 1280px) 50vw, 33vw" className="object-cover" />
+                    </div>
                   ))}
                 </div>
               </div>
@@ -353,13 +340,7 @@ export function HomeExperience() {
         <section id="ablauf" className="scroll-mt-28 py-16 sm:py-20" aria-labelledby="ablauf-heading">
           <div className="container-shell">
             <div className="brand-gradient relative overflow-hidden rounded-[2rem] px-6 py-8 text-white shadow-soft sm:px-10 sm:py-12 lg:px-12 lg:py-14">
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -right-28 -top-16 hidden h-[145%] w-[78%] opacity-[0.12] lg:block">
-                  <Image src="/images/karte-region-hannover-2026-v2.png" alt="" fill sizes="50vw" className="object-contain object-center scale-[1.38]" />
-                </div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_36%,rgba(255,255,255,0.14),transparent_24%),linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.08)_100%)]" />
-              </div>
-              <div className="relative lg:grid lg:grid-cols-[0.94fr_1.06fr] lg:items-center lg:gap-14">
+              <div className="relative lg:grid lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
                 <div>
                   <p className="eyebrow-light">Einsatzgebiet & Ablauf</p>
                   <h2 id="ablauf-heading" className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Hannover & Umland</h2>
@@ -377,13 +358,12 @@ export function HomeExperience() {
                   </div>
                 </div>
                 <div className="relative mt-10 flex items-center justify-center lg:mt-0 lg:justify-end">
-                  <div className="absolute h-[80%] w-[80%] rounded-full bg-white/10 blur-3xl" />
                   <Image
-                    src="/images/karte-region-hannover-2026-v2.png"
-                    alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland"
-                    width={1254}
-                    height={1254}
-                    className="relative z-10 h-auto w-full max-w-[560px] drop-shadow-[0_20px_48px_rgba(44,8,12,0.32)]"
+                    src="/images/karte-region-hannover-outline-mtm-20260527-v5.svg"
+                    alt="Stilisierte Karte der Region Hannover mit Hannover und den umliegenden Städten und Gemeinden"
+                    width={860}
+                    height={640}
+                    className="h-auto w-full max-w-[610px]"
                   />
                 </div>
               </div>

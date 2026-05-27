@@ -51,7 +51,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-soft backdrop-blur-sm">
-              <Image src="/images/leistung-expresstransport-mtm-2026.webp" alt="MTM Fahrzeug beim Beladen für einen kurzfristigen Transportauftrag" width={1200} height={760} className="aspect-[4/3] w-full rounded-[1.4rem] object-cover" />
+              <Image src="/images/leistung-expresstransport-mtm-20260527-v5.webp" alt="MTM Fahrzeug beim Beladen für einen kurzfristigen Transportauftrag" width={1200} height={760} className="aspect-[4/3] w-full rounded-[1.4rem] object-cover" />
             </div>
           </div>
         </section>
@@ -107,37 +107,30 @@ export default function ServicesPage() {
 
         <section className="py-16 sm:py-20">
           <div className="container-shell">
-            <div className="brand-gradient relative overflow-hidden rounded-[2rem] px-7 py-8 text-white shadow-soft sm:px-10 sm:py-12 lg:px-12 lg:py-14">
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -right-24 -top-14 hidden h-[145%] w-[78%] opacity-[0.12] lg:block">
-                  <Image src="/images/karte-region-hannover-2026-v2.png" alt="" fill sizes="50vw" className="object-contain object-center scale-[1.38]" />
-                </div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_36%,rgba(255,255,255,0.14),transparent_24%),linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.08)_100%)]" />
-              </div>
-              <div className="relative grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
+            <div className="brand-gradient overflow-hidden rounded-[2rem] px-7 py-8 text-white shadow-soft sm:px-10 sm:py-12 lg:px-12 lg:py-14">
+              <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-12">
                 <div>
                   <p className="eyebrow-light">Einsatzgebiet</p>
                   <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Region Hannover im Überblick</h2>
                   <p className="mt-5 max-w-xl text-base leading-8 text-white/90">
                     MTM ist regional erreichbar und unterstützt Sie bei passenden Aufträgen in Hannover sowie den umliegenden Städten und Gemeinden der Region.
                   </p>
-                  <div className="mt-7 inline-flex items-start gap-3 rounded-[1.3rem] border border-white/12 bg-white/10 px-4 py-4 text-sm leading-6 text-white/92 backdrop-blur-sm">
+                  <div className="mt-7 inline-flex items-start gap-3 rounded-[1.3rem] border border-white/15 bg-white/10 px-4 py-4 text-sm leading-6 text-white/90 backdrop-blur-sm">
                     <MapPin size={18} className="mt-0.5 shrink-0 text-white" />
                     <span>Einsatzgebiet: {company.area}<br />Mit Schwerpunkt in Hannover und der gesamten Region Hannover.</span>
                   </div>
                   <div className="mt-7 flex flex-wrap gap-3">
-                    <a href={`tel:${company.phoneHref}`} className="inline-flex items-center gap-2 rounded-2xl border border-white/28 bg-white px-5 py-4 font-bold text-accent-dark transition hover:bg-rose-50"><Phone size={16} />{company.phoneDisplay}</a>
-                    <button type="button" onClick={() => openAssistant()} className="button-primary"><Sparkles size={16} />Anfrage starten</button>
+                    <a href={`tel:${company.phoneHref}`} className="inline-flex items-center gap-2 rounded-2xl border border-white/30 bg-white px-5 py-4 font-bold text-accent-dark transition hover:bg-rose-50"><Phone size={16} />{company.phoneDisplay}</a>
+                    <button type="button" onClick={() => openAssistant()} className="inline-flex items-center gap-2 rounded-2xl border border-white/25 bg-white/10 px-5 py-4 font-bold text-white transition hover:bg-white/20"><Sparkles size={16} />Anfrage starten</button>
                   </div>
                 </div>
-                <div className="relative flex items-center justify-center lg:justify-end">
-                  <div className="absolute h-[80%] w-[80%] rounded-full bg-white/10 blur-3xl" />
+                <div className="flex items-center justify-center lg:justify-end">
                   <Image
-                    src="/images/karte-region-hannover-2026-v2.png"
-                    alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland"
-                    width={1254}
-                    height={1254}
-                    className="relative z-10 h-auto w-full max-w-[560px] drop-shadow-[0_20px_48px_rgba(44,8,12,0.32)]"
+                    src="/images/karte-region-hannover-outline-mtm-20260527-v5.svg"
+                    alt="Stilisierte Karte der Region Hannover mit Hannover und den umliegenden Städten und Gemeinden"
+                    width={860}
+                    height={640}
+                    className="h-auto w-full max-w-[610px]"
                   />
                 </div>
               </div>

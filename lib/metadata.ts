@@ -16,7 +16,7 @@ export const homeMetadata: Metadata = {
     siteName: company.brandName,
     images: [
       {
-        url: "/images/og-team-mtm-20260527-v4.webp",
+        url: "/images/og-team-mtm-20260527-v5.webp",
         width: 1200,
         height: 630,
         alt: "Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen",
@@ -40,7 +40,7 @@ export const servicesMetadata: Metadata = {
     siteName: company.brandName,
     images: [
       {
-        url: "/images/og-team-mtm-20260527-v4.webp",
+        url: "/images/og-team-mtm-20260527-v5.webp",
         width: 1200,
         height: 630,
         alt: "MTM Leistungen im Überblick",
