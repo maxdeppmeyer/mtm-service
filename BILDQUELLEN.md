@@ -28,7 +28,7 @@ Für Entkernung liegt weiterhin das bereits ausgewählte Renovierungs-/Entkernun
 
 | Einsatz | Datei im Projekt | Quelle | Fotograf/in |
 | --- | --- | --- | --- |
-| Entkernung | `public/images/leistung-entkernung-mtm-20260527-v6.webp` | Unsplash: „Empty room under renovation with exposed walls and windows.“ | Colin OBrien |
+| Entkernung | `public/images/leistung-entkernung-mtm-20260527-v7.webp` | Unsplash: „Empty room under renovation with exposed walls and windows.“ | Colin OBrien |
 
 Quellseiten:
 
@@ -37,4 +37,4 @@ Quellseiten:
 
 ## Einsatzgebietskarte
 
-`public/images/karte-region-hannover-outline-mtm-20260527-v6.svg` ist eine neu aufgebaute, transparente Kartenillustration im Stil der bestätigten Designvariante. Sie enthält die korrekt geschriebenen Ortsnamen und keinen sichtbaren Schachbrett- oder weißen Bildhintergrund.
+`public/images/karte-region-hannover-design-mtm-20260527-v7.png` wurde aus der bereitgestellten Region-Hannover-Kartengrafik für den bestätigten roten Designblock aufbereitet: transparenter Hintergrund, dezente Linienwirkung, korrigierte beziehungsweise ergänzte Ortsbeschriftung und kein sichtbarer Schachbrett- oder weißer Bildhintergrund.

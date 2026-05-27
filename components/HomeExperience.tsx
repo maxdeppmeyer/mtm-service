@@ -128,7 +128,7 @@ const galleryImages = [
     alt: "MTM Fahrzeug bei einem Umzugseinsatz.",
   },
   {
-    src: "/images/leistung-entkernung-mtm-20260527-v6.webp",
+    src: "/images/leistung-entkernung-mtm-20260527-v7.webp",
     alt: "Innenraum während einer Entkernung oder Sanierung.",
   },
   {
