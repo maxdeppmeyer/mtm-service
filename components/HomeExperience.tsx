@@ -78,7 +78,7 @@ export function HomeExperience() {
       <main>
         <section className="hero-cover relative flex min-h-[calc(100svh-78px)] items-end overflow-hidden text-white" aria-labelledby="hero-heading">
           <Image
-            src="/images/team-mtm.webp"
+            src="/images/teamfoto-mtm-2026.webp"
             alt="Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen"
             fill
             priority
@@ -203,7 +203,7 @@ export function HomeExperience() {
                 </div>
               </div>
               <div className="mt-10 rounded-[1.7rem] bg-white p-5 sm:p-8 lg:mt-0">
-                <Image src="/images/region-map.svg" alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland" width={900} height={640} className="h-auto w-full" />
+                <Image src="/images/karte-region-hannover-2026.svg" alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland" width={900} height={640} className="h-auto w-full" />
               </div>
             </div>
           </div>

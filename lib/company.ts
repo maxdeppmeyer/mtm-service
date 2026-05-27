@@ -49,7 +49,7 @@ export const services: ServiceEntry[] = [
       "Zuverlässige Unterstützung bei privaten und gewerblichen Umzügen – persönlich abgestimmt und sorgfältig durchgeführt.",
     detailIntro:
       "MTM begleitet Wohnungs-, Haus-, Firmen- und Seniorenumzüge in Hannover & Umland mit einem klaren Ablauf, verlässlicher Planung und persönlicher Abstimmung.",
-    image: "/images/service-umzug.webp",
+    image: "/images/leistung-umzug-mtm-2026.webp",
     alt: "MTM Transportfahrzeug mit Firmenbranding im Einsatz",
     highlights: ["Privat- & Firmenumzüge", "Sorgfältige Planung", "Sichere Durchführung"],
     detailPoints: [
@@ -67,7 +67,7 @@ export const services: ServiceEntry[] = [
       "Sicherer Möbeltransport für einzelne Stücke, komplette Einrichtungen oder größere Lieferungen.",
     detailIntro:
       "Wenn Möbel, Geräte oder Einrichtungsteile sicher von A nach B müssen, übernimmt MTM den Transport sorgfältig, termintreu und passend zum Auftrag.",
-    image: "/images/service-transport.webp",
+    image: "/images/leistung-moebeltransport-mtm-2026.webp",
     alt: "Zwei MTM Mitarbeiter tragen ein verpacktes Möbelstück zum Fahrzeug",
     highlights: ["Einzelstücke & Lieferungen", "Schonender Transport", "Zuverlässige Termine"],
     detailPoints: [
@@ -85,7 +85,7 @@ export const services: ServiceEntry[] = [
       "Fachgerechter Auf- und Abbau von Möbeln, Einrichtungen und ausgewählten Schrank- oder Küchenelementen.",
     detailIntro:
       "MTM kümmert sich um die fachgerechte Montage und Demontage von Möbeln – sauber, ordentlich und mit Blick auf eine sichere Nutzung vor Ort.",
-    image: "/images/service-montage.webp",
+    image: "/images/leistung-moebelmontage-2026.webp",
     alt: "Montagearbeit mit Akkuschrauber an einem Möbelstück",
     highlights: ["Auf- & Abbau", "Saubere Ausführung", "Auch einzeln anfragbar"],
     detailPoints: [
@@ -103,7 +103,7 @@ export const services: ServiceEntry[] = [
       "Räumungen von Wohnung, Keller, Garage oder Gewerbefläche – schnell, diskret und sauber durchgeführt.",
     detailIntro:
       "MTM schafft Platz bei Wohnungs-, Haus-, Keller- oder Garagenräumungen und übernimmt eine saubere, diskrete und verlässliche Abwicklung.",
-    image: "/images/service-entruempelung.webp",
+    image: "/images/leistung-entruempelung-2026.webp",
     alt: "Räumungsobjekt mit Möbeln und Gegenständen vor einer Entrümpelung",
     highlights: ["Wohnung, Keller & Garage", "Sortierung & Entsorgung", "Saubere Übergabe"],
     detailPoints: [
@@ -121,7 +121,7 @@ export const services: ServiceEntry[] = [
       "3,5-Tonnen-LKW inkl. Fahrer für eilige Transporte – flexibel, kurzfristig und jederzeit anfragbar.",
     detailIntro:
       "Wenn es schnell gehen muss, bietet MTM Expresstransporte mit 3,5-Tonnen-LKW und Fahrer für dringende Fahrten, kurzfristige Lieferungen oder spontane Transportaufträge an.",
-    image: "/images/service-expresstransport.webp",
+    image: "/images/leistung-expresstransport-mtm-2026.webp",
     alt: "MTM Fahrzeug beim Beladen für einen kurzfristigen Transportauftrag",
     highlights: ["3,5-Tonnen-LKW", "Kurzfristig anfragbar", "Mit Fahrer"],
     detailPoints: [
@@ -138,7 +138,7 @@ export const extraServices = [
     title: "Entkernung",
     description:
       "Ausgewählte Entkernungsarbeiten nach persönlicher Prüfung und Abstimmung des Umfangs.",
-    image: "/images/service-entkernung.webp",
+    image: "/images/leistung-entkernung-2026.webp",
     alt: "Innenraum im Zustand einer Renovierung und Entkernung",
     points: [
       "Entfernung von Böden, Wänden, Decken oder Einbauten nach Absprache",

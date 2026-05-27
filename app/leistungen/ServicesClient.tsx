@@ -51,7 +51,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-soft backdrop-blur-sm">
-              <Image src="/images/service-expresstransport.webp" alt="MTM Fahrzeug beim Beladen für einen kurzfristigen Transportauftrag" width={1200} height={760} className="aspect-[4/3] w-full rounded-[1.4rem] object-cover" />
+              <Image src="/images/leistung-expresstransport-mtm-2026.webp" alt="MTM Fahrzeug beim Beladen für einen kurzfristigen Transportauftrag" width={1200} height={760} className="aspect-[4/3] w-full rounded-[1.4rem] object-cover" />
             </div>
           </div>
         </section>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="rounded-[1.7rem] bg-rose-50 p-5 sm:p-8">
-              <Image src="/images/region-map.svg" alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland" width={900} height={640} className="h-auto w-full" />
+              <Image src="/images/karte-region-hannover-2026.svg" alt="Grafische Darstellung der Region Hannover mit Ortsnamen im Umland" width={900} height={640} className="h-auto w-full" />
             </div>
           </div>
         </section>
