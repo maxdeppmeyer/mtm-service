@@ -22,7 +22,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-rose-200/70">Übersicht</h2>
+          <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-rose-200/70">Rechtliches</h2>
           <div className="flex flex-col gap-3 text-sm text-rose-50">
             <Link href="/impressum" className="hover:text-white">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white">Datenschutz</Link>
