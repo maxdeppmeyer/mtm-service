@@ -98,10 +98,6 @@ const galleryImages = [
     alt: "Innenraum während einer Entkernung oder Sanierung.",
   },
   {
-    src: "/images/galerie-montage-detail-mtm-20260527-v5.webp",
-    alt: "Detailaufnahme bei der Möbelmontage.",
-  },
-  {
     src: "/images/galerie-regalraum-mtm-20260527-v5.webp",
     alt: "Aufgestellte Regale in einem Innenraum.",
   },
@@ -114,7 +110,7 @@ const galleryImages = [
     alt: "Montierte Garderobe mit Kleiderstangen.",
   },
   {
-    src: "/images/galerie-transport-kartons-mtm-20260527-v5.webp",
+    src: "/images/galerie-transport-karton-mtm-20260528-v6.webp",
     alt: "Kartons bei einem Transportauftrag.",
   },
   {

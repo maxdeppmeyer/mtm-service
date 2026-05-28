@@ -104,7 +104,7 @@ export function HomeExperience() {
       <main>
         <section className="hero-cover relative flex min-h-[calc(100svh-78px)] items-end overflow-hidden text-white" aria-labelledby="hero-heading">
           <Image
-            src="/images/hero-team-mtm-20260527-v5.webp"
+            src="/images/hero-team-mtm-20260529-v6.webp"
             alt="Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen"
             fill
             priority

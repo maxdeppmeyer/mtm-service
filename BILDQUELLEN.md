@@ -8,7 +8,7 @@ Die folgenden Dateien basieren auf den vom Unternehmen bereitgestellten Original
 
 | Einsatz | Datei im Projekt |
 | --- | --- |
-| Hero / Gruppenfoto | `public/images/hero-team-mtm-20260527-v5.webp` |
+| Hero / Gruppenfoto | `public/images/hero-team-mtm-20260529-v6.webp` |
 | Social-Preview | `public/images/og-team-mtm-20260527-v5.webp` |
 | Umzug | `public/images/leistung-umzug-mtm-20260527-v5.webp` |
 | Möbeltransport | `public/images/leistung-moebeltransport-mtm-20260527-v5.webp` |
@@ -16,11 +16,10 @@ Die folgenden Dateien basieren auf den vom Unternehmen bereitgestellten Original
 | Entrümpelung & Entsorgung | `public/images/leistung-entruempelung-mtm-20260527-v5.webp` |
 | Expresstransporte | `public/images/leistung-expresstransport-mtm-20260527-v5.webp` |
 | Galerie – Umzugseinsatz | `public/images/galerie-einsatz-umzug-mtm-20260527-v5.webp` |
-| Galerie – Montage Detail | `public/images/galerie-montage-detail-mtm-20260527-v5.webp` |
 | Galerie – Regale | `public/images/galerie-regalraum-mtm-20260527-v5.webp` |
 | Galerie – Schrank | `public/images/galerie-schrank-mtm-20260527-v5.webp` |
 | Galerie – Garderobe | `public/images/galerie-garderobe-mtm-20260527-v5.webp` |
-| Galerie – Transportkartons | `public/images/galerie-transport-kartons-mtm-20260527-v5.webp` |
+| Galerie – Transportkartons | `public/images/galerie-transport-karton-mtm-20260528-v6.webp` |
 
 ## Bild für Entkernung
 
