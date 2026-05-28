@@ -9,13 +9,12 @@ export function Footer() {
       <div className="container-shell grid gap-10 py-12 md:grid-cols-[1.25fr_1fr_0.9fr]">
         <div>
           <Image
-            src="/logo-mtm-red-20260529-v14.png"
-            alt="MTM Möbel Transport Montage"
-            width={1392}
-            height={629}
+            src="/logo-mtm-top-20260529-v15.png"
+            alt="MTM Logo"
+            width={1323}
+            height={381}
             quality={100}
-            unoptimized
-            className="mb-5 h-auto w-[112px] sm:w-[132px]"
+            className="mb-5 h-auto w-[96px] sm:w-[116px]"
           />
           <p className="max-w-sm text-sm leading-7 text-rose-100/80">
             Zuverlässige Unterstützung bei Umzügen, Möbeltransporten, Montagen, Expresstransporten und Entrümpelungen in Hannover & Umland.

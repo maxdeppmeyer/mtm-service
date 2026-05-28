@@ -13,14 +13,13 @@ export function Header({ onOpenAssistant }: HeaderProps) {
       <div className="container-shell flex h-[76px] items-center justify-between gap-4">
         <Link href="/" className="flex items-center" aria-label="Zur Startseite">
           <Image
-            src="/logo-mtm-red-20260529-v14.png"
-            alt="MTM Möbel Transport Montage"
-            width={1392}
-            height={629}
+            src="/logo-mtm-top-20260529-v15.png"
+            alt="MTM Logo"
+            width={1323}
+            height={381}
             priority
             quality={100}
-            unoptimized
-            className="h-auto w-[102px] sm:w-[122px]"
+            className="h-auto w-[88px] sm:w-[108px]"
           />
         </Link>
 

@@ -8,7 +8,7 @@ Die folgenden Dateien basieren auf den vom Unternehmen bereitgestellten Original
 
 | Einsatz | Datei im Projekt |
 | --- | --- |
-| Hero / Gruppenfoto | `public/images/hero-team-mtm-20260529-v14.jpeg` |
+| Hero / Gruppenfoto | `public/images/hero-team-mtm-20260529-v6.webp` |
 | Social-Preview | `public/images/og-team-mtm-20260527-v5.webp` |
 | Umzug | `public/images/leistung-umzug-mtm-20260527-v5.webp` |
 | Möbeltransport | `public/images/leistung-moebeltransport-mtm-20260527-v5.webp` |

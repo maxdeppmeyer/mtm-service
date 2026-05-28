@@ -104,12 +104,11 @@ export function HomeExperience() {
       <main>
         <section className="hero-cover relative flex min-h-[calc(100svh-78px)] items-end overflow-hidden text-white" aria-labelledby="hero-heading">
           <Image
-            src="/images/hero-team-mtm-20260529-v14.jpeg"
+            src="/images/hero-team-mtm-20260529-v6.webp"
             alt="Das Team von MTM Möbel Transport Montage vor den Firmenfahrzeugen"
             fill
             priority
             sizes="100vw"
-            quality={100}
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(20,7,9,0.84)_0%,rgba(20,7,9,0.48)_46%,rgba(20,7,9,0.18)_100%)]" />

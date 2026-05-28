@@ -8,7 +8,7 @@ export function localBusinessSchema() {
     url: company.website,
     telephone: company.phoneHref,
     email: company.email,
-    image: `${company.website}/images/hero-team-mtm-20260529-v14.jpeg`,
+    image: `${company.website}/images/hero-team-mtm-20260529-v6.webp`,
     address: {
       "@type": "PostalAddress",
       streetAddress: company.address.street,
