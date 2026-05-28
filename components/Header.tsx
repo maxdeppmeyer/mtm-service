@@ -1,70 +1,77 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone, Sparkles, X } from "lucide-react";
+import { Menu, Phone, Sparkles } from "lucide-react";
 import { company, navigation } from "@/lib/company";
-import { useState } from "react";
 
-export function Header({ onOpenAssistant }: { onOpenAssistant: () => void }) {
-  const [menuOpen, setMenuOpen] = useState(false);
+type HeaderProps = {
+  onOpenAssistant?: () => void;
+};
 
+export function Header({ onOpenAssistant }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-rose-100/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
-      <div className="container-shell flex items-center justify-between gap-4 py-4">
-        <Link href="/" className="shrink-0" aria-label="MTM Startseite">
-          <Image src="/logo.svg" alt="MTM Möbel Transport Montage" width={210} height={63} priority className="h-auto w-[170px] sm:w-[205px]" />
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+      <div className="container-shell flex h-[76px] items-center justify-between gap-4">
+        <Link href="/" className="flex items-center" aria-label="Zur Startseite">
+          <Image
+            src="/logo-mtm-red-20260528.png"
+            alt="MTM Möbel Transport Montage"
+            width={312}
+            height={108}
+            priority
+            quality={100}
+            className="h-auto w-[136px] sm:w-[168px]"
+          />
         </Link>
 
-        <nav className="hidden items-center gap-4 xl:gap-6 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Hauptnavigation">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="whitespace-nowrap text-sm font-semibold text-slate-700 transition hover:text-accent-dark">
+            <Link key={item.href} href={item.href} className="text-sm font-medium text-slate-700 transition hover:text-accent-dark">
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <a href={`tel:${company.phoneHref}`} className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-rose-200 px-4 py-2 text-sm font-semibold text-accent-dark transition hover:bg-rose-50">
+        <div className="hidden items-center gap-3 md:flex">
+          <a href={`tel:${company.phoneHref}`} className="button-secondary">
             <Phone size={16} />
             {company.phoneDisplay}
           </a>
-          <button type="button" onClick={onOpenAssistant} className="button-primary rounded-full px-5 py-3 text-sm">
-            <Sparkles size={16} />
-            Anfrage-Assistent
-          </button>
-        </div>
-
-        <button
-          type="button"
-          onClick={() => setMenuOpen((current) => !current)}
-          className="inline-flex items-center justify-center rounded-full border border-rose-200 p-3 text-accent-dark lg:hidden"
-          aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
-
-      {menuOpen && (
-        <div className="border-t border-rose-100 bg-white lg:hidden">
-          <div className="container-shell flex flex-col gap-2 py-4">
-            {navigation.map((item) => (
-              <Link key={item.href} href={item.href} className="rounded-2xl px-3 py-3 text-sm font-semibold text-slate-700 hover:bg-rose-50" onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </Link>
-            ))}
-            <a href={`tel:${company.phoneHref}`} className="mt-2 inline-flex items-center gap-2 rounded-2xl border border-rose-200 px-4 py-3 font-semibold text-accent-dark" onClick={() => setMenuOpen(false)}>
-              <Phone size={17} />
-              {company.phoneDisplay}
-            </a>
-            <button type="button" onClick={() => { setMenuOpen(false); onOpenAssistant(); }} className="button-primary mt-1 justify-center">
-              <Sparkles size={17} />
-              Anfrage-Assistent
+          {onOpenAssistant && (
+            <button type="button" onClick={onOpenAssistant} className="button-primary">
+              <Sparkles size={16} />
+              Anfrage starten
             </button>
-          </div>
+          )}
         </div>
-      )}
+
+        <details className="relative lg:hidden">
+          <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-slate-300 hover:text-navy">
+            <Menu size={22} />
+            <span className="sr-only">Menü öffnen</span>
+          </summary>
+          <div className="absolute right-0 mt-3 w-72 rounded-2xl border border-slate-200 bg-white p-4 shadow-card">
+            <nav className="flex flex-col gap-1" aria-label="Mobile Navigation">
+              {navigation.map((item) => (
+                <Link key={item.href} href={item.href} className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-rose-50 hover:text-accent-dark">
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="mt-4 border-t border-slate-200 pt-4">
+              <a href={`tel:${company.phoneHref}`} className="button-secondary w-full justify-center">
+                <Phone size={16} />
+                {company.phoneDisplay}
+              </a>
+              {onOpenAssistant && (
+                <button type="button" onClick={onOpenAssistant} className="button-primary mt-3 w-full justify-center">
+                  <Sparkles size={16} />
+                  Anfrage starten
+                </button>
+              )}
+            </div>
+          </div>
+        </details>
+      </div>
     </header>
   );
 }

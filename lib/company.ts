@@ -67,8 +67,8 @@ export const services: ServiceEntry[] = [
       "Sicherer Möbeltransport für einzelne Stücke, komplette Einrichtungen oder größere Lieferungen.",
     detailIntro:
       "Wenn Möbel, Geräte oder Einrichtungsteile sicher von A nach B müssen, übernimmt MTM den Transport sorgfältig, termintreu und passend zum Auftrag.",
-    image: "/images/leistung-moebeltransport-mtm-20260527-v5.webp",
-    alt: "Zwei MTM Mitarbeiter tragen ein verpacktes Möbelstück zum Fahrzeug",
+    image: "/images/leistung-moebeltransport-mtm-20260528-v6.webp",
+    alt: "MTM Team mit Transportfahrzeugen und einem verpackten Möbelstück beim Einsatz",
     highlights: ["Einzelstücke & Lieferungen", "Schonender Transport", "Zuverlässige Termine"],
     detailPoints: [
       "Transport einzelner Möbelstücke oder kompletter Lieferungen",
@@ -85,8 +85,8 @@ export const services: ServiceEntry[] = [
       "Fachgerechter Auf- und Abbau von Möbeln, Einrichtungen und ausgewählten Schrank- oder Küchenelementen.",
     detailIntro:
       "MTM kümmert sich um die fachgerechte Montage und Demontage von Möbeln – sauber, ordentlich und mit Blick auf eine sichere Nutzung vor Ort.",
-    image: "/images/leistung-moebelmontage-mtm-20260527-v5.webp",
-    alt: "MTM Mitarbeiter bei der Montage eines Regals in einem Wohnraum",
+    image: "/images/leistung-moebelmontage-mtm-20260528-v6.webp",
+    alt: "MTM Mitarbeiter bei einer Möbel- und Badmontage in einem Innenraum",
     highlights: ["Auf- & Abbau", "Saubere Ausführung", "Auch einzeln anfragbar"],
     detailPoints: [
       "Aufbau und Demontage von Möbeln und Einrichtungselementen",

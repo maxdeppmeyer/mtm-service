@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock3 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InquiryAssistant } from "@/components/InquiryAssistant";
@@ -108,19 +107,6 @@ export default function ServicesPage() {
 
         <RegionPanel variant="services" onInquiry={() => openAssistant()} />
 
-        <section className="bg-soft py-16 sm:py-20">
-          <div className="container-shell overflow-hidden rounded-[2rem] bg-white p-7 shadow-card sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
-            <div className="max-w-3xl">
-              <p className="eyebrow">FAQ</p>
-              <h2 className="section-heading">Viele Antworten finden Sie jetzt gesammelt auf der FAQ-Seite.</h2>
-              <p className="section-intro">Die FAQ ist in 6 Themenbereiche gegliedert und beantwortet wichtige Fragen zu Leistungen, Ablauf, Terminen, Kosten und Organisation.</p>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-3 lg:mt-0">
-              <Link href="/faq" className="button-primary">Zur FAQ-Seite<ArrowRight size={17} /></Link>
-              <button type="button" onClick={() => openAssistant("expresstransport")} className="button-secondary"><Clock3 size={16} />Expresstransport anfragen</button>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
       {assistantOpen && <InquiryAssistant open={assistantOpen} defaultService={selectedService} onServiceChange={setSelectedService} onClose={() => setAssistantOpen(false)} />}
