@@ -11,12 +11,13 @@ export function LegalLayout({ title, children }: { title: string; children: Reac
         <div className="container-shell flex h-[76px] items-center justify-between gap-4">
           <Link href="/" aria-label="Zur Startseite">
             <Image
-              src="/logo-mtm-red-20260529-v12.png"
+              src="/logo-mtm-red-20260529-v14.png"
               alt="MTM Möbel Transport Montage"
-              width={312}
-              height={108}
+              width={1392}
+              height={629}
               quality={100}
-              className="h-auto w-[132px] sm:w-[162px]"
+              unoptimized
+              className="h-auto w-[104px] sm:w-[126px]"
             />
           </Link>
           <div className="flex items-center gap-3">
