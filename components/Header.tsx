@@ -9,7 +9,7 @@ type HeaderProps = {
 
 export function Header({ onOpenAssistant }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-white/93 shadow-[0_1px_0_rgba(216,28,45,0.07),0_4px_20px_rgba(36,17,19,0.05)] backdrop-blur-md">
       <div className="container-shell flex h-[76px] items-center justify-between gap-4">
         <Link href="/" className="flex items-center" aria-label="Zur Startseite">
           <Image
@@ -25,7 +25,8 @@ export function Header({ onOpenAssistant }: HeaderProps) {
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Hauptnavigation">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-medium text-slate-700 transition hover:text-accent-dark">
+            <Link key={item.href} href={item.href} className="group relative text-sm font-medium text-slate-700 transition hover:text-accent-dark">
+                <span className="absolute -bottom-0.5 left-0 h-[1.5px] w-0 rounded-full bg-accent transition-all duration-300 group-hover:w-full" aria-hidden="true" />
               {item.label}
             </Link>
           ))}
