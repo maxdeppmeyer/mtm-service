@@ -21,11 +21,13 @@ export function FloatingCTA() {
 
   return (
     <>
-      {/* Desktop: fixierter Button unten rechts – auf allen Seiten */}
+      {/* Desktop: fixierter Button unten rechts – auf allen Seiten
+          KEIN button-primary hier: dieses CSS setzt position:relative
+          und würde das fixed überschreiben → direktes Tailwind stattdessen */}
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="button-primary fixed bottom-6 right-6 z-40 hidden items-center gap-2 rounded-full px-5 py-4 font-bold text-white shadow-xl transition-all hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(216,28,45,0.5)] sm:inline-flex"
+        className="fixed bottom-6 right-6 z-40 hidden items-center gap-2 rounded-full bg-accent px-5 py-4 text-sm font-bold text-white shadow-xl transition-all hover:-translate-y-0.5 hover:bg-[#bf1726] hover:shadow-[0_0_24px_rgba(216,28,45,0.5)] sm:inline-flex"
       >
         <Sparkles size={19} />Anfrage-Assistent
       </button>
