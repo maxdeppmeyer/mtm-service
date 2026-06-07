@@ -4,18 +4,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { InquiryAssistant } from "@/components/InquiryAssistant";
-import { ServiceId } from "@/lib/company";
 import { faqSections } from "@/lib/faq";
-import { useState } from "react";
 
 export default function FaqClient() {
-  const [assistantOpen, setAssistantOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState<ServiceId>("umzug");
-
   return (
     <>
-      <Header onOpenAssistant={() => setAssistantOpen(true)} />
+      <Header />
       <main>
         <section className="brand-gradient text-white">
           <div className="container-shell py-10 sm:py-12">
@@ -48,7 +42,6 @@ export default function FaqClient() {
         </section>
       </main>
       <Footer />
-      {assistantOpen && <InquiryAssistant open={assistantOpen} defaultService={selectedService} onServiceChange={setSelectedService} onClose={() => setAssistantOpen(false)} />}
     </>
   );
 }

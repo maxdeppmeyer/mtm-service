@@ -5,8 +5,6 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, Building2, ChevronDown, ExternalLink, Sparkles, Star } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { InquiryAssistant } from "@/components/InquiryAssistant";
-import { ServiceId } from "@/lib/company";
 import { useState } from "react";
 
 const googleReviewsUrl =
@@ -149,13 +147,11 @@ const googleReviewHighlights = [
 ] as const;
 
 export default function UeberUnsClient() {
-  const [assistantOpen, setAssistantOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState<ServiceId>("umzug");
   const [galleryOpen, setGalleryOpen] = useState(false);
 
   return (
     <>
-      <Header onOpenAssistant={() => setAssistantOpen(true)} />
+      <Header />
       <main>
         <section className="brand-gradient overflow-hidden text-white">
           <div className="container-shell grid gap-9 py-12 sm:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-12">
@@ -169,7 +165,7 @@ export default function UeberUnsClient() {
                 <Link href="/leistungen" className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-4 font-bold text-accent-dark transition hover:bg-rose-50">
                   Leistungen ansehen <ArrowRight size={17} />
                 </Link>
-                <button type="button" onClick={() => setAssistantOpen(true)} className="hero-button-secondary py-4">
+                <button type="button" onClick={() => window.dispatchEvent(new CustomEvent("open-inquiry-assistant"))} className="hero-button-secondary py-4">
                   <Sparkles size={17} /> Anfrage starten
                 </button>
               </div>
@@ -303,7 +299,6 @@ export default function UeberUnsClient() {
         </section>
       </main>
       <Footer />
-      {assistantOpen && <InquiryAssistant open={assistantOpen} defaultService={selectedService} onServiceChange={setSelectedService} onClose={() => setAssistantOpen(false)} />}
     </>
   );
 }

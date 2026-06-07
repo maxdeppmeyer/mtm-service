@@ -1,13 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, Phone, Sparkles } from "lucide-react";
 import { company, navigation } from "@/lib/company";
 
-type HeaderProps = {
-  onOpenAssistant?: () => void;
-};
-
-export function Header({ onOpenAssistant }: HeaderProps) {
+export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-white/93 shadow-[0_1px_0_rgba(216,28,45,0.07),0_4px_20px_rgba(36,17,19,0.05)] backdrop-blur-md">
       <div className="container-shell flex h-[76px] items-center justify-between gap-4">
@@ -37,12 +35,10 @@ export function Header({ onOpenAssistant }: HeaderProps) {
             <Phone size={16} />
             {company.phoneDisplay}
           </a>
-          {onOpenAssistant && (
-            <button type="button" onClick={onOpenAssistant} className="button-primary">
-              <Sparkles size={16} />
-              Anfrage starten
-            </button>
-          )}
+          <button type="button" onClick={() => window.dispatchEvent(new CustomEvent("open-inquiry-assistant"))} className="button-primary">
+            <Sparkles size={16} />
+            Anfrage starten
+          </button>
         </div>
 
         <details className="relative lg:hidden">
@@ -63,12 +59,10 @@ export function Header({ onOpenAssistant }: HeaderProps) {
                 <Phone size={16} />
                 {company.phoneDisplay}
               </a>
-              {onOpenAssistant && (
-                <button type="button" onClick={onOpenAssistant} className="button-primary mt-3 w-full justify-center">
-                  <Sparkles size={16} />
-                  Anfrage starten
-                </button>
-              )}
+              <button type="button" onClick={() => window.dispatchEvent(new CustomEvent("open-inquiry-assistant"))} className="button-primary mt-3 w-full justify-center">
+                <Sparkles size={16} />
+                Anfrage starten
+              </button>
             </div>
           </div>
         </details>

@@ -5,10 +5,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { InquiryAssistant } from "@/components/InquiryAssistant";
 import { RegionPanel } from "@/components/RegionPanel";
-import { extraServices, ServiceId, services } from "@/lib/company";
-import { useState } from "react";
+import { extraServices, services } from "@/lib/company";
 
 const detailActions = [
   "Persönliche Rückmeldung statt automatischer Preisversprechen",
@@ -16,18 +14,14 @@ const detailActions = [
   "Anfrage bequem über den Anfrage-Assistenten",
 ];
 
+function openAssistant(service?: string) {
+  window.dispatchEvent(new CustomEvent("open-inquiry-assistant", { detail: { service } }));
+}
+
 export default function ServicesPage() {
-  const [assistantOpen, setAssistantOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState<ServiceId>("umzug");
-
-  function openAssistant(service?: ServiceId) {
-    if (service) setSelectedService(service);
-    setAssistantOpen(true);
-  }
-
   return (
     <>
-      <Header onOpenAssistant={() => openAssistant()} />
+      <Header />
       <main>
         <section className="brand-gradient overflow-hidden text-white">
           <div className="container-shell grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr_0.88fr] lg:items-center lg:gap-14">
@@ -110,7 +104,6 @@ export default function ServicesPage() {
 
       </main>
       <Footer />
-      {assistantOpen && <InquiryAssistant open={assistantOpen} defaultService={selectedService} onServiceChange={setSelectedService} onClose={() => setAssistantOpen(false)} />}
     </>
   );
 }

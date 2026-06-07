@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { company } from "@/lib/company";
+import { FloatingCTA } from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.website),
@@ -29,7 +30,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <FloatingCTA />
+      </body>
     </html>
   );
 }

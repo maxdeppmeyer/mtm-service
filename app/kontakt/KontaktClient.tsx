@@ -3,18 +3,13 @@
 import { Mail, MapPin, Phone, Sparkles } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { InquiryAssistant } from "@/components/InquiryAssistant";
 import { RegionPanel } from "@/components/RegionPanel";
-import { company, ServiceId } from "@/lib/company";
-import { useState } from "react";
+import { company } from "@/lib/company";
 
 export default function KontaktClient() {
-  const [assistantOpen, setAssistantOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState<ServiceId>("umzug");
-
   return (
     <>
-      <Header onOpenAssistant={() => setAssistantOpen(true)} />
+      <Header />
       <main>
         <section className="brand-gradient text-white">
           <div className="container-shell py-12 sm:py-16">
@@ -52,17 +47,16 @@ export default function KontaktClient() {
               </div>
             </div>
             <div className="mt-9 flex justify-center">
-              <button type="button" onClick={() => setAssistantOpen(true)} className="button-primary">
+              <button type="button" onClick={() => window.dispatchEvent(new CustomEvent("open-inquiry-assistant"))} className="button-primary">
                 <Sparkles size={17} /> Anfrage starten
               </button>
             </div>
           </div>
         </section>
 
-        <RegionPanel variant="contact" onInquiry={() => setAssistantOpen(true)} />
+        <RegionPanel variant="contact" onInquiry={() => window.dispatchEvent(new CustomEvent("open-inquiry-assistant"))} />
       </main>
       <Footer />
-      {assistantOpen && <InquiryAssistant open={assistantOpen} defaultService={selectedService} onServiceChange={setSelectedService} onClose={() => setAssistantOpen(false)} />}
     </>
   );
 }

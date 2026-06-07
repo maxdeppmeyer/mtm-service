@@ -13,15 +13,13 @@ import {
   Package,
   Phone,
   ShieldCheck,
-  Sparkles,
   Truck,
   Wrench,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { InquiryAssistant } from "@/components/InquiryAssistant";
-import { company, extraServices, ServiceId, services } from "@/lib/company";
+import { company, extraServices, services } from "@/lib/company";
 import { useEffect, useRef, useState } from "react";
 
 /* ─── Data ─── */
@@ -198,19 +196,16 @@ function FactCard({ icon: Icon, title, text, delay }: { icon: LucideIcon; title:
 
 /* ─── Main Component ─── */
 
-export function HomeExperience() {
-  const [selectedService, setSelectedService] = useState<ServiceId>("umzug");
-  const [assistantOpen, setAssistantOpen] = useState(false);
-  useScrollReveal();
+function openAssistant(service?: string) {
+  window.dispatchEvent(new CustomEvent("open-inquiry-assistant", { detail: { service } }));
+}
 
-  function openAssistant(service?: ServiceId) {
-    if (service) setSelectedService(service);
-    setAssistantOpen(true);
-  }
+export function HomeExperience() {
+  useScrollReveal();
 
   return (
     <>
-      <Header onOpenAssistant={() => openAssistant()} />
+      <Header />
       <main>
 
         {/* ══════════════════════════════════════
@@ -420,32 +415,6 @@ export function HomeExperience() {
       </main>
       <Footer />
 
-      {/* Desktop floating assistant button */}
-      <button
-        type="button" onClick={() => openAssistant()}
-        className="button-primary fixed bottom-20 right-4 z-30 hidden items-center gap-2 rounded-full px-5 py-4 font-bold text-white shadow-xl transition-all hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(216,28,45,0.5)] sm:inline-flex lg:bottom-6 lg:right-6"
-      >
-        <Sparkles size={19} />Anfrage-Assistent
-      </button>
-
-      {/* Mobile bottom CTA bar */}
-      <div className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-2 gap-2 border-t border-rose-100 bg-white/95 p-3 backdrop-blur-sm sm:hidden">
-        <a href={`tel:${company.phoneHref}`} className="button-secondary justify-center px-3">
-          <Phone size={17} />Anrufen
-        </a>
-        <button type="button" onClick={() => openAssistant()} className="button-primary justify-center px-3">
-          Anfrage
-        </button>
-      </div>
-
-      {assistantOpen && (
-        <InquiryAssistant
-          open={assistantOpen}
-          defaultService={selectedService}
-          onServiceChange={setSelectedService}
-          onClose={() => setAssistantOpen(false)}
-        />
-      )}
     </>
   );
 }
