@@ -5,14 +5,19 @@ import { company } from "@/lib/company";
 export const metadata: Metadata = {
   metadataBase: new URL(company.website),
   title: {
-    default: "MTM Möbel Transport Montage | Umzug, Transport & Entrümpelung in Hannover",
+    default: "Umzüge Hannover | MTM Möbel Transport Montage",
     template: "%s | MTM Möbel Transport Montage",
   },
   description:
-    "MTM unterstützt bei Umzug, Möbeltransport, Montage, Expresstransport und Entrümpelung in Hannover & Umland. Jetzt unverbindlich anfragen.",
+    "Professionelles Umzugsunternehmen in Hannover & Umland. MTM bietet Umzüge, Möbeltransport, Möbelmontage, Entrümpelung & Expresstransporte – persönlich und regional.",
   applicationName: company.brandName,
   formatDetection: { telephone: true, email: true, address: true },
   icons: { icon: "/icon.svg" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
 };
 
 export const viewport: Viewport = {

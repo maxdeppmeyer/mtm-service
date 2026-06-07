@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { company, serviceTitle } from "@/lib/company";
-import { buildInquiryEmailText, InquirySubmission } from "@/lib/inquiry";
+import { buildConfirmationEmailText, buildInquiryEmailText, InquirySubmission } from "@/lib/inquiry";
 
 const acceptedImageTypes = new Set(["image/jpeg", "image/png", "image/webp"]);
 const maxImages = 3;
@@ -135,6 +135,27 @@ export async function POST(request: Request) {
 
     if (!response.ok) {
       return NextResponse.json({ success: false, code: "SEND_ERROR", message: "Die Anfrage konnte momentan nicht übermittelt werden. Bitte rufen Sie direkt an." }, { status: 502 });
+    }
+
+    // Bestätigungs-E-Mail an den Kunden (nicht-fatal – kein Fehler wenn Versand fehlschlägt)
+    try {
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          "User-Agent": "mtm-service-website/1.0",
+        },
+        body: JSON.stringify({
+          from: sender,
+          to: [data.email],
+          reply_to: recipient,
+          subject: `Eingangsbestätigung Ihrer Anfrage – MTM Möbel Transport Montage`,
+          text: buildConfirmationEmailText(data),
+        }),
+      });
+    } catch {
+      // Bestätigung fehlgeschlagen – Hauptanfrage trotzdem erfolgreich
     }
 
     return NextResponse.json({ success: true });
