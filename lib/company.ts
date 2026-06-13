@@ -24,6 +24,7 @@ export const navigation = [
   { label: "Über uns", href: "/ueber-uns" },
   { label: "Kontakt", href: "/kontakt" },
   { label: "FAQ", href: "/faq" },
+  { label: "Ratgeber", href: "/ratgeber" },
 ] as const;
 
 export type ServiceId = "umzug" | "moebeltransport" | "moebelmontage" | "entruempelung" | "expresstransport" | "sonstige";
