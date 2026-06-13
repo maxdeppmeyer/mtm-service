@@ -67,8 +67,10 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-rose-200/60">Rechtliches</h2>
+          <h2 className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-rose-200/60">Mehr</h2>
           <div className="flex flex-col gap-3 text-sm text-rose-50/80">
+            <Link href="/ratgeber" className="transition hover:text-white">Ratgeber</Link>
+            <Link href="/faq" className="transition hover:text-white">FAQ</Link>
             <Link href="/impressum" className="transition hover:text-white">Impressum</Link>
             <Link href="/datenschutz" className="transition hover:text-white">Datenschutz</Link>
           </div>
